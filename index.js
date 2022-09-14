@@ -13,6 +13,7 @@ let arrayIntegers1 = arrayIntegers.slice(0,2);// return [1,2]
 let arrayintegers2 = arrayIntegers.slice(2,3);// return [3]
 let arrayIntegers3 = arrayIntegers.slice(4)// return [5]
 
+//------------------------------------------------------------------------------------------------------------
 
 //pure function
 //Impure
@@ -29,6 +30,7 @@ console.log(numberArray); // returns [6]
 console.log(pureAddNumber(7)(numberArray)); // returns [6, 7]
 console.log(numberArray); // returns [6]
 
+//---------------------------------------------------------------------------------------------------------------
 
 //unary function
 const unaryFunction= (a) => console.log(a+ 10);// Add 10 to the given argument and display the value
@@ -42,11 +44,15 @@ curryUnaryFunction(1); // returns a function: b => c =>  1 + b + c
 curryUnaryFunction(1)(2); // returns a function: c => 3 + c
 curryUnaryFunction(1)(2)(3); // returns the number 6
 
+//------------------------------------------------------------------------------------------------------------
+
 //higher order function
 const firstOrderFunc = () =>
   console.log("Hello, I am a First order function");
 const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
 higherOrder(firstOrderFunc);
+
+//--------------------------------------------------------------------------------------------------------------
 
 // diffrence between call apply and bind methods
 
@@ -64,6 +70,7 @@ function invite(greeting1, greeting2) {
 invite.call(employee1, "Hello", "How are you?"); // Hello John Rodson, How are you?
 invite.call(employee2, "Hello", "How are you?"); // Hello Jimmy Baily, How are you?
 
+//--------------------------------------------------------------------------------------------------------------
 
 //apply() method
     //it invokes the function with this value and allows ro pass in arguments as an array.   
@@ -78,6 +85,7 @@ var employee2 = { firstName: "jimmy", lastName: "bally" };
 invite.apply(employee1, ["hello", "how are you?"]); //hello john radson, how are you?
 invite.apply(employee2, ["hello", "how are you?"]); //hello jimmy bally, how are you?
 
+//---------------------------------------------------------------------------------------------------------------
 
 //bind() method
     //it returns a new function and allows you to pass number of arguments
@@ -95,6 +103,8 @@ var inviteEmployee2 = invite.bind(employee2);
 inviteEmployee1("hello", "how are you?"); // hello John Rodson, How are you?
 inviteEmployee2("hello", "how are you?"); // hello jimmy bally, how are you?
 
+//-------------------------------------------------------------------------------------------------------------
+
 //closures
 function Welcome(name) {
     var greetingInfo = function (message) {
@@ -105,4 +115,78 @@ function Welcome(name) {
   var myFunction = Welcome("John");
   myFunction("Welcome "); //Output: Welcome John
   myFunction("Hello Mr."); //output: Hello Mr.John
+
+//----------------------------------------------------------------------------------------------------------
+//clousers
+/**
+ * Lexical Scope
+ **/
+
+ function init() {
+  let name = "JavaScript closures"; // name is a local variable created by init
+  function displayName() {
+    // displayName() is the inner function, a closure
+    console.log(name); // use variable declared in the parent function
+  }
+  return displayName;
+}
+init();
+
+var closure = init();
+closure();
+//----------------------------------------------------------------------------------------------------------------
+
+//spread operaot 
+function sum(x, y, z) {
+  return x + y + z;
+}
+const numbers = [10, 20, 30];
+
+// Using Spread Operator
+console.log(sum(...numbers)); // 60
+
+// Using Apply (ES5)
+console.log(sum.apply(null, numbers)); // 60
+
+//------------------------------------------------------------------------------------------------------------
+
+//copying an array 
+let fruits = ["banana", "orange", "apple"];
+let newFruits = [...fruits];
+console.log(newFruits);
+
+//-------------------------------------------------------------------------------------------------------------
+
+//concatinate of array
+let arr1 = ["A", "B", "C"];
+let arr2 = ["X", "Y", "Z"];
+
+let result = [...arr1, ...arr2];
+
+console.log(result); 
+
+// Output
+['A', 'B', 'C', 'X', 'Y', 'Z']
+
+//---------------------------------------------------------------------------------------------------------------
+
+//spreading elements together with an individual element:
+let fruit = ["banana" , "orange", "apple"];
+let newFruitss = ["cherry", ...fruit];
+console.log(newFruitss);
+
+// Output
+['Cherry', 'Apple','Orange','Banana']
+
+//----------------------------------------------------------------------------------------------------------------
+
+//spread operator for object literals 
+let obj1 = { id: 101, name: 'Rajiv Sandal' }
+let obj2 = { age: 35, country: 'INDIA'}
+
+const employee = { ...obj1, ...obj2 }
+
+console.log(employee); // { "id": 101, "name": "Rajiv Sandal", "age": 35, "country": "INDIA" }
+
+//-------------------------------------------------------------------------------------------------------------
 
