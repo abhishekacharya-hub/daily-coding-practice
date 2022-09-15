@@ -190,3 +190,17 @@ console.log(employee); // { "id": 101, "name": "Rajiv Sandal", "age": 35, "count
 
 //-------------------------------------------------------------------------------------------------------------
 
+//sets()
+let num = new Set([10, 20, 20, 30, 40, 50]);
+
+console.log(num); // Set(5) {10, 20, 30, 40, 50}
+console.log(typeof num); // Object
+
+//-----------------------------------------------------------------------------------------------------------------
+
+//repeat()
+const msg = "Hello World \n";
+
+console.log(`${msg.repeat(3)}`);
+
+// Output: Hello World Hello World Hello World
