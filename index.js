@@ -204,3 +204,57 @@ const msg = "Hello World \n";
 console.log(`${msg.repeat(3)}`);
 
 // Output: Hello World Hello World Hello World
+
+//-------------------------------------------------------------------------------------------------------------
+
+//arrow function
+
+let add = (x, y) => x + y;
+
+console.log(add(10, 20)); // 30
+
+//-------------------------------------------------------------------------------------------------------------
+
+//arrow function with this 
+/**
+ * Using ES5
+ * 
+ **/
+ var person = {
+  name: "Diksha",
+  actions: ["bike", "hike", "ski", "surf"],
+  printActions: function() {
+    var _this = this;
+    this.actions.forEach(function(action) {
+      var str = _this.name + " likes to " + action;
+      console.log(str);
+    });
+  }
+};
+person.printActions();
+
+/**
+ * Using Arrow function
+ * 
+ **/
+let person = {
+  name: "Diksha",
+  actions: ["bike", "hike", "ski", "surf"],
+  printActions() {
+    this.actions.forEach((action) => {
+      let str = this.name + " likes to " + action;
+      console.log(str);
+    });
+  }
+};
+
+person.printActions();
+
+// Output:
+//Diksha likes to bike 
+//Diksha likes to hike 
+//Diksha likes to ski 
+//Diksha likes to surf
+
+//-------------------------------------------------------------------------------------------------------------
+
