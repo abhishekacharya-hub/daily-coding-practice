@@ -258,3 +258,49 @@ person.printActions();
 
 //-------------------------------------------------------------------------------------------------------------
 
+//Destructing Assignment:
+const phone = {
+  title: "iPhone",
+  price: 999,
+  description: "The iPhone is a smartphone developed by Apple"
+};
+console.log(phone.title);
+
+
+// Destructing Assignment
+const { title, price, description } = {
+  title: "iPhone",
+  price: 999,
+  description: "The iPhone is a smartphone developed by Apple"
+};
+console.log(title); // iPhone
+console.log(price); // 999
+console.log(description); // The iPhone is a smartphone developed by Apple
+
+//------------------------------------------------------------------------------------------------------------
+
+//generators
+function* generator(num) {
+  yield num + 10;
+  yield num + 20;
+  yield num + 30;
+}
+let gen = generator(10);
+
+console.log(gen.next().value); // 20
+console.log(gen.next().value); // 30
+console.log(gen.next().value); // 40
+
+//------------------------------------------------------------------------------------------------------------
+
+//symbols
+const symbol1 = Symbol();
+const symbol2 = Symbol(42);
+const symbol3 = Symbol("Hi");
+
+console.log(typeof symbol1); // symbol
+console.log(symbol3.toString()); // Symbol(Hi)
+console.log(Symbol("Hi") === Symbol("Hi")); // false
+
+//-------------------------------------------------------------------------------------------------------------
+
