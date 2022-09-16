@@ -220,7 +220,7 @@ console.log(add(10, 20)); // 30
  * Using ES5
  * 
  **/
- var person = {
+ /*var person = {
   name: "Diksha",
   actions: ["bike", "hike", "ski", "surf"],
   printActions: function() {
@@ -237,7 +237,7 @@ person.printActions();
  * Using Arrow function
  * 
  **/
-let person = {
+/*et person = {
   name: "Diksha",
   actions: ["bike", "hike", "ski", "surf"],
   printActions() {
@@ -246,9 +246,9 @@ let person = {
       console.log(str);
     });
   }
-};
+};*/
 
-person.printActions();
+//person.printActions();
 
 // Output:
 //Diksha likes to bike 
@@ -302,5 +302,46 @@ console.log(typeof symbol1); // symbol
 console.log(symbol3.toString()); // Symbol(Hi)
 console.log(Symbol("Hi") === Symbol("Hi")); // false
 
+//--------------------------------------------------------------------------------------------------------------
+
+//global variable
+var x = 10;
+
+if (x === 10) {
+  var x = 20;
+
+  console.log(x);
+  // expected output: 20
+}
+
+console.log(x);
+// expected output: 20
+
 //-------------------------------------------------------------------------------------------------------------
+
+//declare a global variable with a funcion 
+
+window.value = 90;
+
+// Declaring global variable by window object
+function setValue() {
+  window.value = 100;
+}
+
+// Accessing global variable from other function
+function getValue() {
+  setValue();
+  return window.value;
+}
+
+console.log(getValue()); // 100
+
+//-------------------------------------------------------------------------------------------------------------
+
+//template leterals in string
+const person = {name : "abhishek" , age : 25 };
+console.log(`hy my name is ${person.name} and my age is ${person.age}`)
+
+//--------------------------------------------------------------------------------------------------------------
+
 
