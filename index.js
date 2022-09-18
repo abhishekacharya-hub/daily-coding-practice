@@ -344,4 +344,58 @@ console.log(`hy my name is ${person.name} and my age is ${person.age}`)
 
 //--------------------------------------------------------------------------------------------------------------
 
+//hoisting:
+//function hoisting
+getName("abhishek acharya");
+function getName(name) {
+  console.log("hello" +  " " + name )
+}
+// Output Hello abhishek acharya
+
+//variable hoisting
+console.log(message);
+var message = "hey this is abhishek acharya how you doing"
+
+//hositing with let and const
+//console.log(x);
+//let x = 10;
+// Output: ReferenceError: x is not defined
+
+//-------------------------------------------------------------------------------------------------------------
+
+//arrays:
+//array of numbers
+const numberss = [1,2,3,4,5];
+//array of strings
+const personn = ["sameer", "abhishek", "raghav", "rocky", "vaibav"];
+//array of keyword
+//const nums = new Array[10, 20, 30, 40, 50];
+
+//accessing array element
+let fruitss = ["banana", "apple", "cherry", "orange", "grapes", "coconut"];
+console.log(fruitss[3]); // orange
+console.log(fruitss[fruitss.length-1]); //cocnut
+
+//itrate in array
+for(let i=0; i<fruitss; i++) {
+  console.log(fruitss[i]);
+}
+
+//adding new array
+let per = ["ravi", "roy", "sameer", "hardik", "ritvik"];
+per.push("sami");
+
+//associative arrays
+
+const employ = {name: "jatin setty", id: "12345", email: "jatin@gmail.com"};
+console.log(employ.id);
+console.log(employ.name);
+console.log(employ.email);
+//console.log(Object.key(employ).length);
+
+//retrive the elements
+for(let key in employ) {
+  console.log(key + " = " +employ[key]);
+}
+
 
