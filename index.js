@@ -424,3 +424,54 @@ delete employees[0];
 for (let key in employees) {
   console.log(employees[key]);
 }
+
+//array methods: 
+//array.join()
+let elements = ["air", "fire", "water"];
+console.log(elements.join());
+console.log(elements.join(""));
+console.log(elements.join("-"));
+
+//array.pop()
+let vegies = ['broccoli', 'cauliflower', 'kale'];
+console.log(vegies.pop());
+console.log(vegies);
+
+//array.push()
+let animals = ["tiger", "lion", "goat"];
+let counts = animals.push("cow");
+console.log(counts);
+console.log(animals);
+
+//array.shift()
+let nonveg = ["chicken", "mutton", "fish", "crab"];
+console.log(nonveg.shift());
+console.log(nonveg);
+
+//array.unshift()
+let parties = ["club", "home", "terace"];
+parties.unshift("street", "beaches");
+console.log(parties);
+
+//array.concat()
+let alf1 = ["a","b","c"];
+let alf2 = ["d","e","f"];
+console.log(alf1.concat(alf2));
+
+//array.map()
+let array = [1, 2, 3];
+let map1 = array.map(x => x*4);
+console.log(array); // 1.2.3
+console.log(map1); //4, 8, 12
+
+//arrray.filter()
+let words = ["final", "destination", "horror", "basement", "synthwave", "retro"];
+let resultt = words.filter(word => word.length>7);
+console.log(resultt);
+
+//array.reduce()
+let array2 = [12, 23, 34];
+let reducer = (accumlator, currentValue) => accumlator+ currentValue;
+console.log((array2).reduce(reducer)); //69
+console.log((array2).reduce(reducer, 6)); //75
+
