@@ -398,4 +398,29 @@ for(let key in employ) {
   console.log(key + " = " +employ[key]);
 }
 
+//caculate the length of associate array
+const books = {name: "back in old days", author: "abhishek", email: "abhishek@gmail.com"};
+console.log(Object.keys(books).length);
 
+//iterate through the array
+let outfits = ["jeans", "shirts", "hoodies", "shorts"];
+for(let i=0; i< outfits.length; i++){
+  console.log(outfits[i]);
+}
+//array of object
+const employees = [
+  { id: 101, name: "Sakshi Memon", email: "sakshi.memon@email.com" },
+  { id: 102, name: "Subhash Shukla", email: "subhash.shukla@email.com" },
+  { id: 103, name: "Mohini Karpe", email: "mohini.karpe@email.com" }
+];
+
+// Using DOT notation
+console.log(employees[0].name);
+
+// Using delete keyword
+delete employees[0];
+
+// Iterating using for..in loop
+for (let key in employees) {
+  console.log(employees[key]);
+}
