@@ -425,6 +425,8 @@ for (let key in employees) {
   console.log(employees[key]);
 }
 
+//------------------------------------------------------------------------------------------------------
+
 //array methods: 
 //array.join()
 let elements = ["air", "fire", "water"];
@@ -511,3 +513,33 @@ let found = array7.find(function(element) {
   return element>100;
 });
 console.log(found);
+
+//array.inludes()
+let array8 = [1,2,3,4,5,6];
+console.log(array8.includes(2)); //output : true
+let ani = ["cat","dog","rabiit"];
+console.log(ani.includes("ca")); //false
+//---------------------------------------------------------------------------------------------------------------------
+
+//for..in and for..off
+let list = [10,20,30,40];
+for(let i in list) {
+  console.log(i); //0,1,2,3,4
+}
+for(let i of list) {
+  console.log(i); // 10,20,30,40
+}
+//---------------------------------------------------------------------------------------
+
+//destructuring of array
+const numb = [12, 23, 34, 45];
+const [one, two, three, four] = numb;
+console.log(two); // 23
+console.log(one); // 12
+
+//swapping varibales
+let a =89;
+let b =45;
+[a,b] = [b,a];
+console.log(b); //89
+console.log(a); //45
