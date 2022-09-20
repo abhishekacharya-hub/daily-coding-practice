@@ -475,3 +475,39 @@ let reducer = (accumlator, currentValue) => accumlator+ currentValue;
 console.log((array2).reduce(reducer)); //69
 console.log((array2).reduce(reducer, 6)); //75
 
+//array.reducerRight()
+let array3 = [[0,1], [2,3], [4,5]].reduceRight(
+  (accumlator, currentValue) => accumlator.concat(currentValue)
+);
+console.log(array3); //[4,5,2,3,0,1]
+
+//array.every()
+function isBelowThreshold(currentValue) {
+  return currentValue<40;
+}
+array4 = [4,26,23,36,35];
+console.log(array4.every(isBelowThreshold)); //true// returns a boolean result if all condtion fulfil
+
+//array.some()
+let array5 = [1,3,4,5,6];
+let even = function(element) {
+  return element% 2 === 0;
+}
+console.log(array5.some(even)); // true //even if one conditon comes out to be true 
+
+//array.indexOf()
+let array6 = ["camila", "ariana", "weeknd", "justin"];
+console.log(array6.indexOf("ariana")); //  it will return 1
+console.log(array6.indexOf("abel")); //it does nt exist so it will return -1
+
+//array.lastIndexOfIndex()
+let paragraph = "The quick brown fox jumps over the lazy dog. If the dog barked, was it really lazy?";
+let searchTerm = "dog";
+console.log('The index of the first "' + searchTerm + '" from the end is ' + paragraph.lastIndexOf(searchTerm));
+
+//array.find()
+let array7 = [2,34,65,56,36,109,233];
+let found = array7.find(function(element) {
+  return element>100;
+});
+console.log(found);
