@@ -632,4 +632,20 @@ function sum(...args){
 }
   console.log(sum(12,23)); //35
   console.log(sum(34,45,67)); //146
+//--------------------------------------------------------------------------------------
+
+//regular expression
+//test();
+let exp = /hello/;
+let res1 = exp.test("hello world");
+let res2 = exp.test("how are you");
+console.log(res1); //true
+console.log(res2); //false
+
+//exec();
+let ress1 = exp.exec("hello world");
+let ress2 = exp.exec("how are you");
+console.log(ress1); // ['Hello', index: 0, input: 'Hello World', groups: undefined]
+console.log(ress2); //null
+
 
