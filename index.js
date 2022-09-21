@@ -573,4 +573,63 @@ let array11 = [23,45,65];
 let reduce = array11.reduce(function(number,sum){
   return sum = number + sum; 
 });
-console.log(reduce);
+console.log(reduce); //133
+
+//-------------------------------------------------------------------------------------
+//json:
+
+//empty json array
+const empty = [];
+//json array of numbers
+const numbs = [12,23,43,54];
+//josn array of objects
+let emp = [{ "name": "Kabir Dixit", "email": "kabir.dixit@gmail.com", "age": 23 },
+{ "name": "Mukta Bhagat", "email": "mukta.bhagat@gmail.com", "age": 28 },
+{ "name": "Sakshi Ramakrishnan", "email": "sakshi.ramakrishnan@gmail.com", "age": 33 }
+];
+
+console.log(emp[1].name); //mukta bhagat
+
+//how to validate json object in javascript
+function isValidJson(json) {
+  try{
+    JSON.parse(json)
+    return true;
+  }catch (e) {
+    return false;
+  }
+}
+console.log(isValidJson("{}")); //TRUE
+console.log(isValidJson("abc")); //FALSE
+
+//JSON stringify
+const user = {'name': 'Shashi Meda', 'email': 'shashi.meda@email.com', 'age': 28};
+console.log(JSON.stringify(user));
+
+//JSON parse
+const user1 = '{"name": "Shashi Meda", "email": "shashi.meda@email.com", "age": 28}'
+console.log(JSON.parse(user1));
+
+//----------------------------------------------------------------------------------------
+
+//sort():
+//sorting the array in higher order to lower order
+const array12 = [2,4,7,34,56,3];
+array12.sort((a,b) => b-a);
+console.log(array12);
+
+//sorting the array in lower to higher order
+const array13 = [23,45,25,54,65];
+array13.sort((a,b) => a-b);
+console.log(array13);
+//-------------------------------------------------------------------------------------
+
+//rest parameter:
+function sum(...args){
+  return args.reduce((previous,current) => {
+    return previous + current;
+  });
+}
+  console.log(sum(12,23)); //35
+  console.log(sum(34,45,67)); //146
+
