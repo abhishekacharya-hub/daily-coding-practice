@@ -543,3 +543,34 @@ let b =45;
 [a,b] = [b,a];
 console.log(b); //89
 console.log(a); //45
+//-----------------------------------------------------------------------------------------------
+
+//forEach();
+let array9 = [12,34,54,53];
+array9.forEach (function(number,index) {
+  console.log(number + " " + "comes at " + index);
+});
+//12 comes at 0
+//34 comes at 1
+//54 comes at 2
+
+//filter();
+let array10 = [20,30,40];
+let res = array10.filter(function(number) {
+  return number> 25;
+});
+console.log(res); //30,40
+
+//map();
+let map2 = [12,13,14];
+let mapped = map2.map(function(number){
+  return number*2;
+});
+console.log(mapped); //24,26,28
+
+//reduce();
+let array11 = [23,45,65];
+let reduce = array11.reduce(function(number,sum){
+  return sum = number + sum; 
+});
+console.log(reduce);
