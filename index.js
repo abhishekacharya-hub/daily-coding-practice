@@ -743,6 +743,16 @@ const person2 = {name: "shankar", city:"pune"};
 const clonePerson2 = {...person2};
 console.log(clonePerson2);
 
-clonePerson.name = "shatis";
-console.log(clonePerson.name);
+clonePerson2.name = "shatis";
+console.log(clonePerson2.name);
 console.log(person2.name);
+
+//clone the object using JSON.parse()
+const person3 = {name:"abhishek", city:"berhampur"};
+const clonePerson3 = JSON.parse(JSON.stringify(person3));
+console.log(clonePerson3);
+
+clonePerson3.name = "bablu";
+console.log(clonePerson3.name);
+console.log(person3.name);
+//--------------------------------------------------------------------------------------
