@@ -648,4 +648,24 @@ let ress2 = exp.exec("how are you");
 console.log(ress1); // ['Hello', index: 0, input: 'Hello World', groups: undefined]
 console.log(ress2); //null
 
+//-------------------------------------------------------------------------------------
 
+//arrow function:
+let greet = () => console.log("hello world");
+greet();
+//arrow function as expression:
+let age = 25;
+let welcome = (age<18) ?
+  () => console.log('baby') : 
+  () => console.log('adult');
+welcome();
+//arrow function in one argument
+let greeting = x => console.log(x);
+greeting ("hello world");
+//arraow function as multiple arg
+let area = (r) => {
+  const pi = 3.14;
+  return pi*r*r;
+}
+let ans = area(10);
+console.log(ans);
