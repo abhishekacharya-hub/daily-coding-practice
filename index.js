@@ -669,3 +669,56 @@ let area = (r) => {
 }
 let ans = area(10);
 console.log(ans);
+
+//------------------------------------------------------------------------------------
+
+// clearTimeout()
+
+var messages;
+function greetin() {
+  console.log("Hello World!");
+  stop();
+}
+function start() {
+  console.log("start");
+  messages = setTimeout(greetin, 3000);
+}
+function stop() {
+  console.log("stop");
+  clearTimeout(msg);
+}
+
+start();
+
+// Output
+//Start
+//Hello World!
+//Stop
+
+//example of destructuring of an object
+let man = {name: "abhishek", agee:25, email:"abhishek@gamil,com", country:"india"};
+let name = man.name;
+let agee = man.agee;
+let country = man.country;
+let email = man.email;
+console.log(name);
+console.log(agee);
+console.log(country);
+console.log(email);
+
+//how to check if on object is array or not
+//creating some variable
+let v1 = {name:"ajay", age:25};
+let v2 = ["red","blue","pink","purple"];
+let v3 = [12, 34, 53, 45];
+let v4= null
+//testing the variable datatypes
+typeof(v1); // returns "object"
+typeof(v2); // returns "object"
+typeof(v3); // returns "object"
+typeof(v4); // returns "object"
+//testing the variable is an array
+Array.isArray(v1); //false
+Array.isArray(v2); //true
+Array.isArray(v3); //true
+Array.isArray(v4); //false
