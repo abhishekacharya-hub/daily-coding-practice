@@ -694,7 +694,7 @@ start();
 //Start
 //Hello World!
 //Stop
-
+//-------------------------------------------------------------------------------------
 //example of destructuring of an object
 let man = {name: "abhishek", agee:25, email:"abhishek@gamil,com", country:"india"};
 let name = man.name;
@@ -722,3 +722,27 @@ Array.isArray(v1); //false
 Array.isArray(v2); //true
 Array.isArray(v3); //true
 Array.isArray(v4); //false
+//---------------------------------------------------------------------------------------
+
+//clone an object with spread opertor
+const obj = {a: 10, b: 20 };
+const cloneObject = {...obj};
+
+//clone an object with object.assign()
+const person1 = {name:"vijay", city:"mumbai"};
+const clonePerson = Object.assign({},person1);
+console.log(clonePerson);
+//changing the name of person in clonePerson
+clonePerson.name = "hritik";
+
+console.log(clonePerson.name);
+console.log(person1.name);
+
+//clone the object with using spread operator
+const person2 = {name: "shankar", city:"pune"};
+const clonePerson2 = {...person2};
+console.log(clonePerson2);
+
+clonePerson.name = "shatis";
+console.log(clonePerson.name);
+console.log(person2.name);
