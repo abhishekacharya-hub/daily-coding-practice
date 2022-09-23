@@ -756,3 +756,50 @@ clonePerson3.name = "bablu";
 console.log(clonePerson3.name);
 console.log(person3.name);
 //--------------------------------------------------------------------------------------
+
+//How do you copy properties from one object to other?
+const target = {a:1, b:2};
+const source = {b:3, c:4};
+const returnTarget = Object.assign(target,source);
+console.log(target); //a:1,b:3,c:4
+console.log(returnTarget); //a:1,b:3,c:4
+//----------------------------------------------------------------------------------------
+
+//promise:
+const promise = new Promise(function (resolve, reject){
+  //promise description
+});
+
+const promise1 = new Promise(function(resolve, reject) {
+  //the function is executed automatcally when the promise is constructed.
+
+  //after 1 second signal that the job is done with the result "done" si display
+  setTimeout(() => resolve("done"), 1000);
+});
+
+//promise chain:
+const promise2 = new Promise(function(resolve, reject){
+  setTimeout(() => resolve(10),1000);
+})
+.then(function(result){
+  console.log(result);
+  return result +20;
+})
+
+.then(function(result){
+  console.log(result)
+  return result +30;
+})
+
+//promise all:
+const promise3 = new Promise(function(resolve,reject){
+  setTimeout(() => resolve, 10, "first")
+})
+const promise4 = new Promise(function(resolve,reject){
+  setTimeout(() => resolve, 29, "second")
+})
+Promise.all([promise3,promise4])
+  .then((value) => {
+    console.log(value)
+  })
+  .catch((error) => console.log(`error in promise${error}`));
