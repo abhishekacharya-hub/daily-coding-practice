@@ -819,3 +819,15 @@ const promise5 = new Promise(function (resolve, reject) {
 Promise.race([promise4, promise5]).then(function (value) {
   console.log(value); // "Second" // Both promises will resolve, but promise2 is faster
 });
+//------------------------------------------------------------------------------------
+//async() and await():
+async function fetchMethod() {
+  try {
+    let response = await fetch ("https://api.github.com/users/1")
+    let data = await response.json();
+    console.log(data);
+  } catch(error) {
+    console.error(error);
+  }
+}
+fetchMethod();
