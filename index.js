@@ -778,55 +778,44 @@ const promise1 = new Promise(function(resolve, reject) {
 });
 //---------------------------------------------------------------------------------------
 //promise chain():
-const promise2 = new Promise(function(resolve, reject){
-  setTimeout(() => resolve(10),1000);
+new Promise(function (resolve, reject) {
+  setTimeout(() => resolve(10), 1000);
 })
-.then(function(result){
-  console.log(result);
-  return result +20;
-})
-
-.then(function(result){
-  console.log(result)
-  return result +30;
-})
+  .then(function (result) {
+    console.log(result); // 10
+    return result + 20;
+  })
+  .then(function (result) {
+    console.log(result); // 30
+    return result + 30;
+  });
 //------------------------------------------------------------------------------------
 //promise all():
-const promise3 = new Promise((resolve,reject) => {
-  setTimeout( resolve, 10, "first")
-})
-const promise4 = new Promise((resolve,reject) =>{
-  setTimeout( resolve, 29, "second")
-})
-Promise.all([promise3,promise4])
-  .then((value) => {
-    console.log(value)
-  })
-  .catch((error) => console.log(`error in promise${error}`));
+const promise2 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 10, "First");
+});
 
-//-------------------------------------------------------------------------------------
-//promise.all():
-const promise5 = new Promise((resolve,reject) => {
-  setTimeout(resolve, 23, "third")
-})  
-const promise6 = new Promise((resolve,reject) => {
-  setTimeout(resolve, 34, "fourth")
-})
+const promise3 = new Promise((resolve, reject) => {
+  setTimeout(resolve, 20, "Second");
+});
 
-Promise.all([promise5,promise6])
-  .then((value) => {
-    console.log(value)
+Promise.all([promise2, promise3])
+  .then((values) => {
+    console.log(values);
   })
-  .catch((error) => console.log(`error in promise${error}`));
+  .catch((error) => console.log(`Error in promises ${error}`));
+// expected output: Array ["First", "Second"]
 
 //---------------------------------------------------------------------------------------
-//promise.race():
-const promise7 = new Promise(function(resolve,reject){
-  setTimeout( resolve, 34, "first")
+//promise.race()
+const promise4 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 500, "First");
 });
-const promise8 = new Promise(function (resolve, reject) {
+
+const promise5 = new Promise(function (resolve, reject) {
   setTimeout(resolve, 100, "Second");
 });
-Promise.race([promise7,promise8]).then(function(value){
-  console.log(value)
+
+Promise.race([promise4, promise5]).then(function (value) {
+  console.log(value); // "Second" // Both promises will resolve, but promise2 is faster
 });
