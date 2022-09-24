@@ -843,3 +843,27 @@ xhr.onreadystatechange = function() {
 xhr.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true );
 xhr.setRequestHeader("content-Type", "application/x-www-form-urlencoded");
 xhr.send();
+
+//------------------------------------------------------------------------------------
+//fetech():
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+.then(function(response){
+  return response.json;
+})
+.then(function(data){
+  console.log(data)
+})
+.catch(function(err){
+  console.log("somthing went wrong", err)
+})
+
+fetch("https://api.github.com/users/learning-zon")
+.then(function(response){
+  return response.json;
+})
+.then(function(data){
+  console.log(data);
+})
+.catch(function(err){
+  console.log("something went wrong!",  err);
+})
