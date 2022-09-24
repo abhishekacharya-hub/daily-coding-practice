@@ -867,3 +867,46 @@ fetch("https://api.github.com/users/learning-zon")
 .catch(function(err){
   console.log("something went wrong!",  err);
 })
+
+//headers object:
+let reqHeader = new Headers();
+reqHeader.append("content-Type", "text/json");
+let intObject = {
+  method : "GET",
+  Headers : reqHeader
+}
+fetch("https://api.github.com/users/learning-zon")
+.then(function(response){
+  return response.json;
+})
+.then(function(data){
+  console.log(data);
+})
+.catch(function(err){
+  console.log("something went wrong!", err);
+})
+
+//request object:
+let reqHeade = new Headers();
+reqHeade.append("Content-Type", "text/json");
+
+let initObject = {
+  method: "GET",
+  headers: reqHeade
+};
+
+const userRequest = new Request(
+  "https://api.github.com/users/learning-zone",
+  initObject
+);
+
+fetch(userRequest)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    console.log(data);
+  })
+  .catch(function (err) {
+    console.log("Something went wrong!", err);
+  });
