@@ -912,3 +912,23 @@ fetch(userRequest)
   });
 //-------------------------------------------------------------------------------------
 
+(function () {
+  var xhr;
+  document.getElementById("app").addEventListener("click", makeRequest);
+
+  function makeRequest() {
+    if (window.XMLHttpRequest) {
+      // code for IE7+, Firefox, Chrome, Opera, Safari
+      xhr = new XMLHttpRequest();
+    }
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("result").innerHTML =
+          "<pre>" + this.responseText + "</pre>";
+      }
+    };
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true); //this makes asynchronous true or false
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.send();
+  }
+})();
