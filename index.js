@@ -911,7 +911,7 @@ fetch(userRequest)
     console.log("Something went wrong!", err);
   });
 //-------------------------------------------------------------------------------------
-
+//AJAX  request:
 (function () {
   var xhr;
   document.getElementById("app").addEventListener("click", makeRequest);
@@ -932,3 +932,12 @@ fetch(userRequest)
     xhr.send();
   }
 })();
+//---------------------------------------------------------------------------------------------------------------
+//error handling:
+//error object
+try{
+  greeting3("welcome");
+}
+catch(err){
+  console.log(err.name + ":" + err.message);  //reference error: greeting3 is not defined,
+}
