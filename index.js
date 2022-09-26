@@ -993,3 +993,28 @@ Circle.prototype.circumference = function() {
 const circle = new Circle(5);
 console.log(circle.area());
 console.log(circle.circumference());
+
+//---------------------------------------------------------------------------------------
+//create an object  using prototype?
+const user2 = {
+  name: "ritvik chauhan",
+  printInfo : function() {
+    console.log(`hey my name is ${user.name}.`)
+  }
+};
+const admin = Object.create(user2);
+admin.name = "ritika mishra";
+admin.printInfo();
+
+//example 2
+const user4 = {
+  name : "rudra mishra",
+  printTheInfo : function() {
+    console.log(`hey my name is ${user4.name}`)
+  }
+};
+const admin1 = Object.create(user4);
+admin1.name = "mahira sharma";
+admin.printTheInfo();
+
+//------------------------------------------------------------------------------------
