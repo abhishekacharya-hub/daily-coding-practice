@@ -1009,13 +1009,13 @@ admin.printInfo();
 //example 2
 const user4 = {
   name : "rudra mishra",
-  printInfo2 : function() {
+  printInfo : function() {
     console.log(`hey my name is ${user4.name}`)
   }
 };
 const admin1 = Object.create(user4);
 admin1.name = "mahira sharma";
-admin.printInfo2();
+admin.printInfo();
 
 //------------------------------------------------------------------------------------
 //how to use constructor function for inheritence in javascript
@@ -1034,5 +1034,21 @@ function Employee(company) {
 //prototype inhertence
 Employee.prototype = new Person4("sundar pichai", 25, 50000);
 let Employeeee = new Employee("google");
-console.log(Employee instanceof Person4);
-console.log(Employee instanceof Employee);
+console.log(Employee instanceof Person4); //true
+console.log(Employee instanceof Employee); //true
+
+//prtotype chanining
+function person5(firstName,lastName,age) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+  this.age = age;
+}
+//prottype chaining
+person5.prototype.getFullName = function() {
+  return this.firstName + " " + this.lastName;
+};
+//create an instance of person class
+const person6 = new person5("mahira" ,"sharma", 23);
+person5.hasOwnProperty("firstName"); // true
+person5.hasOwnProperty("getFullName"); // false
+person5.getFullName(); // Vanya Dayal
