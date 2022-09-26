@@ -941,3 +941,55 @@ try{
 catch(err){
   console.log(err.name + ":" + err.message);  //reference error: greeting3 is not defined,
 }
+//----------------------------------------------------------------------------------------------
+//classes:
+//prototypal inheritence:
+//parent object
+let ParentUser = {
+  talk: true,
+  Canfly() {
+    return "Sorry, Can't fly";
+  },
+};
+//children object
+let ChildUser = {
+  CanCode: true,
+  CanCook() {
+    return "Can't say";
+  },
+
+//inherit parent object from parentuser
+__proto__ : ParentUser,
+};
+console.log("can a user talk?:" + ChildUser.talk); //object of parentuser
+console.log("can a user fly?:" + ChildUser.Canfly()); //method of parentuser
+console.log("can a user code?:" + ChildUser.CanCode); //object of children user
+console.log("can a user cook?:" + ChildUser.CanCook()); //method of children useer
+//----------------------------------------------------------------------------------------
+//ptorotype:
+//constructor function
+function Employee(id,name){
+  this.id = id;
+  this.name = name;
+}
+//obejct
+let employee3 = new Employee(123245, "jay malhotra");
+//prtotype
+Employee.prototype.getName = function() {
+  return this.name;
+}
+console.log(employee3.getName());
+//------------------------------------------------------------------------------------------
+function Circle(radius) {
+  this.radius = radius;
+}
+Circle.prototype.area = function() {
+  let radius = this.radius;
+  return Math.PI* radius* radius;
+};
+Circle.prototype.circumference = function() {
+  return 2*Math.PI* this.radius;
+};
+const circle = new Circle(5);
+console.log(circle.area());
+console.log(circle.circumference());
