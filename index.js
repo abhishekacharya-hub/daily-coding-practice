@@ -999,7 +999,7 @@ console.log(circle.circumference());
 const user2 = {
   name: "ritvik chauhan",
   printInfo : function() {
-    console.log(`hey my name is ${user.name}.`)
+    console.log(`hey my name is ${user2.name}.`)
   }
 };
 const admin = Object.create(user2);
@@ -1009,12 +1009,30 @@ admin.printInfo();
 //example 2
 const user4 = {
   name : "rudra mishra",
-  printTheInfo : function() {
+  printInfo2 : function() {
     console.log(`hey my name is ${user4.name}`)
   }
 };
 const admin1 = Object.create(user4);
 admin1.name = "mahira sharma";
-admin.printTheInfo();
+admin.printInfo2();
 
 //------------------------------------------------------------------------------------
+//how to use constructor function for inheritence in javascript
+//constructor function
+function Person4(name,age,salary) {
+ this.name = name;
+ this.age =  age;
+ this.salary = salary;
+ this.incrementSalary = function(byValue) {
+  this.salary = this.salary + byValue;
+ }
+}
+function Employee(company) {
+  this.company = company;
+}
+//prototype inhertence
+Employee.prototype = new Person4("sundar pichai", 25, 50000);
+let Employeeee = new Employee("google");
+console.log(Employee instanceof Person4);
+console.log(Employee instanceof Employee);
