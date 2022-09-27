@@ -1051,5 +1051,5 @@ person5.prototype.getFullName = function() {
 const person6 = new person5("mahira" ,"sharma", 23);
 person5.hasOwnProperty("firstName"); // true
 person5.hasOwnProperty("getFullName"); // false
-person5.getFullName(); // Vanya Dayal
+//person5.getFullName(); // Vanya Dayal
 //-------------------------------------------------------------------------------------

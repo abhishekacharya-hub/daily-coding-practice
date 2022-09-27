@@ -1,5 +1,3 @@
-console.log("hey hello world");
-
 //what are the posssible way to create object in js
 let object = new Object();
 
@@ -96,7 +94,32 @@ const firstOrder = () => {
 }
 
 //what is higher order function
-const firstOrderFunc = () =>
-  console.log("Hello, I am a First order function");
-const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
-higherOrder(firstOrderFunc);
+// the function which takes or accepts another function as an argument
+const randomNumbers = [4, 11, 42, 14, 39];
+
+const filteredArray = randomNumbers.filter((number) => {
+  return number > 15;
+});
+console.log(filteredArray); // [42, 39]
+
+//what is unary function
+//this function takes excatly one arg
+const unary = (a) => console.log(a+20);
+
+//what is currying funcion
+//it takes multiple arg turning into a sequence of function.each functions takes one arg.
+//normal fun
+const addTotal = (a,b,c) => {
+    return a+b+c;
+}
+console.log(addTotal(12,23,34));
+//currying fun
+const addCurry = (a) => {
+    return (b) => {
+      return (c) => {
+        return a + b + c;
+      };
+    };
+  };
+  console.log(addCurry(20)(20)(20));
+
