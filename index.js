@@ -1036,7 +1036,7 @@ Employee.prototype = new Person4("sundar pichai", 25, 50000);
 let Employeeee = new Employee("google");
 console.log(Employee instanceof Person4); //true
 console.log(Employee instanceof Employee); //true
-
+//-----------------------------------------------------------------------------------------
 //prtotype chanining
 function person5(firstName,lastName,age) {
   this.firstName = firstName;
@@ -1052,3 +1052,4 @@ const person6 = new person5("mahira" ,"sharma", 23);
 person5.hasOwnProperty("firstName"); // true
 person5.hasOwnProperty("getFullName"); // false
 person5.getFullName(); // Vanya Dayal
+//-------------------------------------------------------------------------------------
