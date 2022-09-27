@@ -76,3 +76,27 @@ let arrayInt6 = arrayInteger.splice(3, 1, "a", "b", "c") //return [4] orginal ar
 
 //========================================================================================================
 
+//difference btween slice and splice
+//slice : it does nt change the original array. it is immutable. it is subset of original array
+//splice : it change the original array. it is mutable. insert or delete element from an array
+
+//====================================================================================================
+
+//what is first class function
+//function which is used as a variable in that language later
+const handler = () => {
+    console.log("this is a click handler");
+}
+document.addEventListener("click", handler);
+
+//what is first order function
+//the function which does nt accept another function as an argument. doesnt return a funciton as a value
+const firstOrder = () => {
+    console.log("this is first order function");
+}
+
+//what is higher order function
+const firstOrderFunc = () =>
+  console.log("Hello, I am a First order function");
+const higherOrder = (ReturnFirstOrderFunc) => ReturnFirstOrderFunc();
+higherOrder(firstOrderFunc);
