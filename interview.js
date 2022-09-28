@@ -123,3 +123,60 @@ const addCurry = (a) => {
   };
   console.log(addCurry(20)(20)(20));
 
+//what is pure function
+//pure function is nothing but this function gives the same output for the same input for no. of times  
+function morning(name) {
+    return `hello ${name}`
+}
+console.log(morning("world")); //hello world
+//=======================================================================================================
+
+//difference btween let and var 
+//let: it is block scope, introduced in es6 and it hoisted but not initialised
+//var: it is global scope and has function scope and variables are hoisted
+
+let counter = 30;
+if(counter === 30) {
+    let counter =31;
+    console.log(counter); //31
+}
+console.log(counter); //30
+
+//temporal deadzone
+//when you declare a variable with let and const and not been in initialized yet the
+//time period between this is called temporal deadzone.
+//function someMethod() {
+ //   console.log(counterr); //undefined
+//  console.log(count); //reference error
+//}
+//var counterr = 10;
+//let count = 20;
+
+//====================================================================================
+
+//what is IIFE
+//IIFE stands for immediate involked function expression and it is excecued immediatly.
+//it is mostly used for data privacy. 
+//you can not access to the variables that present inside this function in outer world
+//=======================================================================================
+
+//what is memoization
+//memoization is a technique that improves your function perfomance by giving your previous caching values
+const memoizAddition = () => {
+    let cache = {};
+    return (value) => {
+      if (value in cache) {
+        console.log("Fetching from cache");
+        return cache[value]; // Here, cache.value cannot be used as property name starts with the number which is not a valid JavaScript  identifier. Hence, can only be accessed using the square bracket notation.
+      } else {
+        console.log("Calculating result");
+        let result = value + 20;
+        cache[value] = result;
+        return result;
+      }
+    };
+  };
+  // returned function from memoizAddition
+  const addition = memoizAddition();
+  console.log(addition(20)); //output: 40 calculated
+  console.log(addition(20)); //output: 40 cached
