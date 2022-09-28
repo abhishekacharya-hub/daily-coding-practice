@@ -248,3 +248,16 @@ function marvel() {
 marvel();
 
 //==================================================================================
+//what is moduel
+//modules are just reusable codes and we export and import where do need to repeat our code
+//maintainbily , resusabilities , namespacing
+
+//what is webstorage
+//it is an browser api the store data in the client side.
+// local storage and session storage
+//local storage can store data for no expiration of time
+//session storage can data emit once the tab is closed or internet goes off
+
+//what is cookies
+//cookies are piece of data that store inside your computer and access by the browser
+//it remember your id and password when you visit next time to a website
