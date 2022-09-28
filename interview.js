@@ -180,3 +180,71 @@ const memoizAddition = () => {
   const addition = memoizAddition();
   console.log(addition(20)); //output: 40 calculated
   console.log(addition(20)); //output: 40 cached
+//===================================================================================================================================================================================================================
+
+//what is hoisting
+//in js variables functions class are hoisted to top of the code or top of their scope.
+//remember in js only declartion is hoisted not initialization.
+
+console.log(sms); //undefined
+var sms = "hey how you doing today"
+
+console.log(countt); //undefined
+var countt = 1;
+//function scope:
+let p = 10;
+let q = 23;
+let totResult = adds(p,q);
+console.log(totResult);
+function adds(a, b)  {
+  return a + b;
+}
+//=========================================================================================
+
+//what is ES6 classes
+//classes are the sytactic sugar over js existing prototype based inhertence
+function Bike(model,price) {
+  this.model = model;
+  this.price = price;
+}
+let detail = new Bike("CBR", 120000);
+Bike.prototype.getDetails = function() {
+  return this.model + " "  + "has the price is" + " " + this.price;
+}
+console.log(detail.getDetails());
+
+//ES6 class
+/*class Car {
+  constructor(color, model) {
+    this.color = color;
+    this.model = model;
+  }
+  
+  getDetail() {
+    return this.model + " car has" + this.color + " color";
+  }
+}*/
+//=====================================================================================
+
+//what is clouser
+//clouser is the combination of function and its lexical environment.
+//a function can access to its lexical env and variables. means the the inner function can acess to its outer function variable
+function random() {
+  let sigma = "wassupppp dude"
+  function anyMethod() {
+    console.log(sigma);
+  }
+  return anyMethod();
+}
+random();
+
+function marvel() {
+  let arya= "hey this your captain"
+  function dc() {
+    console.log(arya);
+  }
+  return dc()
+}
+marvel();
+
+//==================================================================================
