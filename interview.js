@@ -261,3 +261,29 @@ marvel();
 //what is cookies
 //cookies are piece of data that store inside your computer and access by the browser
 //it remember your id and password when you visit next time to a website
+//====================================================================================
+
+//spread operator
+function sumNumbers(x,y,z) {
+  return x+y+z;
+}
+const n = [13,54,56];
+console.log(sumNumbers(...n)); //123
+
+let abi = [123,342,54];
+let shek = [23,45,756];
+let answer = [...abi, ...shek];
+console.log(answer); 
+//====================================================================================
+
+//promise
+const promises = new Promise(
+  (resolve) => {
+    setTimeout(() => {
+      resolve("I'm a Promise!");
+    }, 5000);
+  },
+  (reject) => {}
+);
+
+promise.then((value) => console.log(value));
