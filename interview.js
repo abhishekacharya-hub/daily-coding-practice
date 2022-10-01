@@ -281,9 +281,51 @@ const promises = new Promise(
   (resolve) => {
     setTimeout(() => {
       resolve("I'm a Promise!");
-    }, 5000);
+    }, 3000);
   },
   (reject) => {}
 );
 
-promise.then((value) => console.log(value));
+promise.then((value) => console.log(value))
+//=====================================================================================
+
+//calllback function
+//callback function is a function passes into an another function as an argumant.
+function callbackFunction(name) {
+  console.log("Hello " + name);
+}
+
+function outerFunction(callback) {
+  let name = prompt("Please enter your name.");
+  callback(name);
+}
+
+outerFunction(callbackFunction);
+//=======================================================================================
+
+//what is callback hell
+//callback hells is deeply nested callbacks which is hard to read and debug when dealing with the asynchronous logics
+//which is looks likes this like a pyramid
+async(function() {
+  async(function() {
+    async(function() {
+      async(function() {
+         
+      });
+    });
+  });
+});
+
+//==============================================================================================================================
+
+//why do we need callback function
+function firstFunction() {
+  setTimeout(function() {
+    console.log("first function called")
+  },2000)
+}
+function secondFunction() {
+  console.log("this is second function called")
+}
+firstFunction();
+secondFunction();
