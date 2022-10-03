@@ -2,8 +2,8 @@
 in this repo contain all the daily javascript code practices of diffrent topics with  well structured and maintained code.
 
 These functions are the most conventional way to create objects that use functionality from each other using prototypal inheritance.
-
-```function Person(name) {
+```
+function Person(name) {
 	// 1
 	this.name = name;
 	this.greet = function() {
@@ -14,4 +14,6 @@ These functions are the most conventional way to create objects that use functio
 var person = new Person("Jack Johnson");
 
 //3
-console.log(Object.getPrototypeOf(person)); // Person {}```
+console.log(Object.getPrototypeOf(person)); // Person {}
+
+```
