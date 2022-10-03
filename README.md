@@ -18,4 +18,4 @@ var person = new Person("Jack Johnson");
 //3
 console.log(Object.getPrototypeOf(person)); // Person {}
 
-```javascript
+```
