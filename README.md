@@ -3,8 +3,8 @@ in this repo contain all the daily javascript code practices of diffrent topics 
 
 These functions are the most conventional way to create objects that use functionality from each other using prototypal inheritance.
 
- // Code for coloring ```
- 
+```javascript
+
 function Person(name) {
 	// 1
 	this.name = name;
@@ -18,4 +18,4 @@ var person = new Person("Jack Johnson");
 //3
 console.log(Object.getPrototypeOf(person)); // Person {}
 
- // Code for coloring ```
+```javascript
