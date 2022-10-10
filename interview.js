@@ -331,3 +331,18 @@ firstFunction();
 secondFunction();
 
 //============================================================================================
+//debounce:
+// in js we use function in so many ways like in high order function we pass the function inside another function as an argument and also we retun a fucntion 
+//as the part of the function. but here in debounce does both.
+//it has mostly work with eventlistener and let say we want to execute a function name myFunc.
+//and we want to exec the funtion with a 2000ms delay. so here debounce comes to the picture.
+//so insted passing the function to the event listener we can pass in to the debounce 
+//and we can give it a time of 2000ms as well.
+
+function debounce(callback, delay) {
+  let timeout;
+  return function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(callback, delay);
+  }
+}
