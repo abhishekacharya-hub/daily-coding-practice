@@ -32,8 +32,15 @@ The object we just created has a property called prototype, and the value is jus
 
 __Debounce__:
 Debounce functions in JavaScript are higher-order functions that limit the rate at which another function gets called.
+
 a higher order function a function that takes another function as an argument or return as a function as a part of return statement.here the debounce does the both.
 the most common way to use debounce is to in an eventlistener attach to a html element.
+
+Say that you have a function named myFunc that gets called each time you type something into an input field. After going through the requirements for your project, you decide that you want to change the experience.
+
+Instead, you want myFunc to execute when at least 2 seconds have passed since the last time you typed something in.
+
+This is where a debounce can comes into play. Instead of passing myFunc to the event listener, you would pass in the debounce. The debounce itself would then take myFunc as an argument, along with the number 2000.
 ```javascript
 
 function debounce( callback, delay ) {
