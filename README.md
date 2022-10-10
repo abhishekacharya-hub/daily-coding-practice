@@ -35,3 +35,20 @@ Every JavaScript object has an internal property called [[Prototype]]. If you lo
 When you try to access a property on the new object, it checks the object’s own properties first. If it doesn’t find it there, it checks the [[Prototype]], and so on up the prototype chain until it gets back to Object.prototype, which is the root delegate for most objects.
 The prototype is a property on a constructor function that sets what will become the proto property on the constructed object.
 Every object can have another object as its prototype. Then the former object inherits all of its prototype’s properties. An object specifies its prototype via the internal property [[Prototype]]. The chain of objects connected by the [[Prototype]] property is called the prototype chain:
+
+Debounce:
+Debounce functions in JavaScript are higher-order functions that limit the rate at which another function gets called.
+a higher order function a function that takes another function as an argument or return as a function as a part of return statement.here the debounce does the both.
+the most common way to use debounce is to in an eventlistener attach to a html element.
+```javascript
+
+function debounce( callback, delay ) {
+    let timeout;
+    return function() {
+        clearTimeout( timeout );
+        timeout = setTimeout( callback, delay );
+    }
+}
+
+```
+Debounce funtion is simple yet more powerful, function that can have noticeable impact on most javascript applications while it is fun to use it but most organisation use debounce as to increase the performance of their applications.

@@ -346,3 +346,9 @@ function debounce(callback, delay) {
     timeout = setTimeout(callback, delay);
   }
 }
+//now the ideal way to use debounce is to in an event listener
+ function helloWorld() {
+  console.log("hello universe");
+ }
+ const myInput = document.getElementById("myInput");
+ myInput.addEventListener("keyup", debounce(helloWorld, 2000));
