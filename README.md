@@ -1,6 +1,19 @@
 # daily-coding-practice
 in this repo contain all the daily javascript code practices of diffrent topics with  well structured and maintained code.
 
+__spread operator and rest operator__
+
+spread operator expand the elements of an iterable while rest operator is the rest last element of the arg.
+
+```javascript
+
+function sum(x,y,z) {
+    return x+y+z;
+}
+const numbers = [12,23,34]
+console.log(sum(...numbers));
+```
+
 __constructor function__
 
 These functions are the most conventional way to create objects that use functionality from each other using prototypal inheritance.
