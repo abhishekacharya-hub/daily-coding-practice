@@ -6,13 +6,26 @@ __spread operator and rest operator__
 spread operator expand the elements of an iterable while rest operator is the rest last element of the arg.
 
 ```javascript
-
+//spread opertor
 function sum(x,y,z) {
     return x+y+z;
 }
 const numbers = [12,23,34]
 console.log(sum(...numbers));
 ```
+```javascript
+//rest opertor
+function xyz(x, y, ...z) {
+  console.log(x, " ", y) // hey hello
+
+  console.log(z) // ["wassup", "goodmorning", "hi", "howdy"]
+  console.log(z[0]) // wassup
+  console.log(z.length) // 4
+}
+
+xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
+```
+
 
 __constructor function__
 
