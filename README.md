@@ -55,3 +55,10 @@ function debounce( callback, delay ) {
 
 ```
 Debounce funtion is simple yet more powerful, function that can have noticeable impact on most javascript applications while it is fun to use it but most organisation use debounce as to increase the performance of their applications.
+
+__throttling__
+
+throttling returns a function and invokes the callback function with a x ms time interval of time only the first time it invoked imediatly.
+
+the main difference btween the debounce and throttling is both returns the function n number of times but only invokes the callback  and where debounce wait for x ms after the last call where as the throttling invokes the callback function on each x ms interval of time.
+it prevent the frequent calling of the funciton.
