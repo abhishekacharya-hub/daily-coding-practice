@@ -25,7 +25,18 @@ function xyz(x, y, ...z) {
 
 xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
 ```
+__call stack__
 
+1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
+2.code execute single threaded it means the code executes one by one
+3.funciton invocation creates a stack frame and that occupy temporary memory 
+4.it works and follow the principle of LIFO
+
+__stack overflow__
+
+when the stack takes more space then it was assign it gets an error called stackoverfilow.
+
+this is comes to the picture when we deal with recursive functions, it is a fucntion that call itself multiple times with out any exit point . so when we call a recursive function the browser throws an error "maximum call size exceeds" this is what we call stack overflow
 
 __constructor function__
 
