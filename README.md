@@ -61,6 +61,7 @@ __filter()__
 let words = ["predestination", "burn", "finally", "demonstalk", "uninterupt"]
 let result = words.filter((word) => word.length>7);
 console.log(result);
+
 //with out arrow function
 let words = ["predestination", "burn", "finally", "demonstalk", "uninterupt"]
 let result = words.filter(function(word){
@@ -69,6 +70,34 @@ let result = words.filter(function(word){
 console.log(result);
 ```
 
+__every()__
+
+```javascript
+//without arrow function
+function isBelowThreshold(currentValue) {
+    return currentValue>40;
+}
+let array = [23,34,12,26]
+console.log(array.every(isBelowThreshold))
+
+```
+
+__reduce()__
+
+```javascript
+//with arrow function
+let array = [12,34,45,65,34]
+let reducer = (accumlator,currentValue) => accumlator+currentValue;
+console.log(array.reduce(reducer));
+console.log(array.reduce(reducer,23));
+
+//with out arrwo function
+let array = [12,43,5,65,44]
+let result = array.reduce(function(number,sum){
+    return sum = number + sum;
+});
+console.log(result);
+```
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern

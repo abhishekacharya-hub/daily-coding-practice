@@ -487,7 +487,7 @@ console.log(array3); //[4,5,2,3,0,1]
 function isBelowThreshold(currentValue) {
   return currentValue<40;
 }
-array4 = [4,26,23,36,35];
+let array4 = [4,26,23,36,35];
 console.log(array4.every(isBelowThreshold)); //true// returns a boolean result if all condtion fulfil
 
 //array.some()
