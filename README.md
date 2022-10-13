@@ -29,6 +29,8 @@ __array methods__
 
 __map()__
 
+inshort it iterate through the array and returns a new array and it does nt touches the original array at all.
+
 ```javascript
 //with arrow function
 let array1 = [12,34,54,23]
@@ -45,6 +47,8 @@ console.log(mapResult);
 
 __forEach()__
 
+foreach method also iterate through the array but it does nt return a new array. it basicaly replace the original array.
+
 ```javascript
 //without arrow function
 let array1 = [45,23,65,22]
@@ -55,6 +59,8 @@ array1.forEach((number,index){
 ```
 
 __filter()__
+
+filter method creates a new array and do the function test that has given
 
 ```javascript
 //with arrow function
@@ -71,6 +77,9 @@ console.log(result);
 ```
 
 __every()__
+every method checks the function actually fulfils the each element and return the output in boolean meaning,
+The every() method returns true if the function returns true for all elements.
+the every() method returns false if the function returns false for one elements
 
 ```javascript
 //without arrow function
