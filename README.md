@@ -25,12 +25,32 @@ function xyz(x, y, ...z) {
 
 xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
 ```
+__array methods__
+
+__map()__
+
+```javascript
+//with arrow function
+let array1 = [12,34,54,23]
+let mapResult = array1.map((x) => x*2);
+console.log(mapResult);
+
+//without arrow function
+let array2 = [12,24,45,22]
+let mapResult = array2.map(function(number){
+    return number*4;
+});
+console.log(mapResult);
+```
+
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
 2.code execute single threaded it means the code executes one by one
 3.funciton invocation creates a stack frame and that occupy temporary memory 
 4.it works and follow the principle of LIFO
+
+in summery, we have an empy callstack and then when we invokes a function it get push inside the callstack and poped out automatically when the function get executed  and the call stack get empty again.
 
 __stack overflow__
 

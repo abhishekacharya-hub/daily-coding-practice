@@ -462,7 +462,7 @@ console.log(alf1.concat(alf2));
 
 //array.map()
 let array = [1, 2, 3];
-let map1 = array.map(x => x*4);
+let map1 = array.map((x) => x*4);
 console.log(array); // 1.2.3
 console.log(map1); //4, 8, 12
 
