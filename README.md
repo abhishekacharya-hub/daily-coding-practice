@@ -43,6 +43,32 @@ let mapResult = array2.map(function(number){
 console.log(mapResult);
 ```
 
+__forEach()__
+
+```javascript
+//without arrow function
+let array1 = [45,23,65,22]
+array1.forEach((number,index){
+    console.log(number + " " + "comes at " + index)
+});
+
+```
+
+__filter()__
+
+```javascript
+//with arrow function
+let words = ["predestination", "burn", "finally", "demonstalk", "uninterupt"]
+let result = words.filter((word) => word.length>7);
+console.log(result);
+//with out arrow function
+let words = ["predestination", "burn", "finally", "demonstalk", "uninterupt"]
+let result = words.filter(function(word){
+    return word.length>7
+})
+console.log(result);
+```
+
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
