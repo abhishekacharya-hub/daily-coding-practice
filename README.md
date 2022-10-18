@@ -210,6 +210,62 @@ closer is a combination of funtion and its lextcal environment. a function can a
 
 ```
 
+__function__ :
+
+__anonymous function__
+
+a function with out name is called anonymous function
+
+```javascript
+const anonymousFun = function() {
+    console.log("i am anonymous function my value is stored in anonymouFun")
+}
+```
+
+__expression function__
+
+expression function are anonymous function and we assign that to a variable and to return a value from the function we must call the variable
+
+```javascript
+const square = function (n) {
+    return n*n;
+}
+console.log(square(3)); //6
+```
+
+__self involking functions__
+
+self involking functions are anonymous function which do not need to call to return a value
+
+```javascript
+const squaredNum = (function(n) {
+    return n*n
+})(10);
+console.log(squaredNum); //100
+```
+
+__arrow function__
+
+arrow function is an alternative to write function and these two has some minor diffrence between them. 
+arrow function dont have function key word it has the arrow key instead
+
+```javascript
+
+//this is normal function
+function square(n) {
+    return n*n
+}
+console.log(square(5)); //25
+
+//this is with arrow function
+const square = (n) => {
+    return n*n;
+}
+console.log(square(2)); //4
+
+//if we have one line then we can explicits return
+const square = (n) => n*n  
+```
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
