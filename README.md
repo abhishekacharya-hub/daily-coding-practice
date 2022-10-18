@@ -39,7 +39,7 @@ console.log(numbers.slice(1,4)); //[2,3,4]
 
 ```
 
-__spice()__
+__splice()__
 
 it takes three parameters: starting postion, number of times to removed and numbers of times to removed.
 
@@ -129,7 +129,7 @@ foreach method also iterate through the array but it does nt return a new array.
 //without arrow function
 
 let array1 = [45,23,65,22]
-array1.forEach((number,index){
+array1.forEach(function(number,index){
     console.log(number + " " + "comes at " + index)
 });
 
@@ -174,6 +174,8 @@ console.log(array.every(isBelowThreshold))
 
 __reduce()__
 
+We use the reduce method to sum all numbers in an array together, or to multiply items in an array or to concatenate items in an array. Let us see the following different example to make this explanation more clear.
+
 ```javascript
 //with arrow function
 
@@ -182,7 +184,7 @@ let reducer = (accumlator,currentValue) => accumlator+currentValue;
 console.log(array.reduce(reducer));
 console.log(array.reduce(reducer,23));
 
-//with out arrwo function
+//with out arrow function
 
 let array = [12,43,5,65,44]
 let result = array.reduce(function(number,sum){
