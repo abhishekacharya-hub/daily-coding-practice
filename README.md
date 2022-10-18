@@ -27,7 +27,7 @@ function xyz(x, y, ...z) {
 
 xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
 ```
-__array methods__
+__array methods__:
 
 __slice()__
 
@@ -55,11 +55,52 @@ __push()__
 adding item to the end of the list
 
 ```javascript
-const array = ["apple","banana","mango","cheery"]
-console.log(array.push("grapes")); // 5
-console.log(array) // ["apple","banana","mango","cheery","grapes"]
+const fruits = ["apple","banana","mango","cheery"]
+console.log(fruits.push("grapes")); // 5
+console.log(fruits) // ["apple","banana","mango","cheery","grapes"]
+```
+__pop()__
+
+removing item to end item from the end
+
+```javascript
+const fruits = ["apple","banana","mango","cheery"]
+fruits.pop();
+console.log(fruits); // ["apple","banana","mango"]
 ```
 
+__shift()__
+
+removing one item from the begining
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+numbers.shift();
+console.log(numbers);
+```
+
+__unshift()__
+
+adding one item in the beginning of the array
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+numbers.unshift(0);
+console.log(numbers);
+```
+
+__sort()__
+
+```javascript
+const numbers = [12,45,23,43,241]
+const arr = numbers.sort(function(a,b) {return (b-a)});
+console.log(arr); //[241,45,43,23,12]
+
+const numbers = [23,45,243,345,22]
+const arr = numbers.sort(function(a,b) {return (a-b)});
+console.log(arr); //[22, 23, 45, 243, 345]
+
+```
 __map()__
 
 inshort it iterate through the array and returns a new array and it does nt touches the original array at all.
@@ -115,6 +156,7 @@ console.log(result);
 ```
 
 __every()__
+
 every method checks the function actually fulfils the each element and return the output in boolean meaning,
 The every() method returns true if the function returns true for all elements.
 the every() method returns false if the function returns false for one elements
@@ -151,6 +193,7 @@ console.log(result);
 
 
 __closure__
+
 closer is a combination of funtion and its lextcal environment. a function can access to its lexical environment and its variable. meaing the innerfunction can have access to its outer function varibales
 
 ```javascript  
