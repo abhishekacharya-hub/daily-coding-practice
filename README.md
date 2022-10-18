@@ -7,6 +7,7 @@ spread operator expand the elements of an iterable while rest operator is the re
 
 ```javascript
 //spread opertor
+
 function sum(x,y,z) {
     return x+y+z;
 }
@@ -15,6 +16,7 @@ console.log(sum(...numbers));
 ```
 ```javascript
 //rest opertor
+
 function xyz(x, y, ...z) {
   console.log(x, " ", y) // hey hello
 
@@ -27,17 +29,50 @@ xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
 ```
 __array methods__
 
+__slice()__
+
+It takes two parameters:starting and ending position. It doesn't include the ending position.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+console.log(numbers.slice(1,4)); //[2,3,4]
+
+```
+
+__spice()__
+
+it takes three parameters: starting postion, number of times to removed and numbers of times to removed.
+
+```javascript
+const numbers = [1, 2, 3, 4, 5]
+console.log(numbers.splice()) //remove all the items
+console.log(numbers.splice(0,1)) // remove the first item
+console.log(numbers.splice(3,3,7,8,9)) // [1,2,3,7,8,9] it removes the 3 items and and replace 3 items
+```
+
+__push()__
+
+adding item to the end of the list
+
+```javascript
+const array = ["apple","banana","mango","cheery"]
+console.log(array.push("grapes")); // 5
+console.log(array) // ["apple","banana","mango","cheery","grapes"]
+```
+
 __map()__
 
 inshort it iterate through the array and returns a new array and it does nt touches the original array at all.
 
 ```javascript
 //with arrow function
+
 let array1 = [12,34,54,23]
 let mapResult = array1.map((x) => x*2);
 console.log(mapResult);
 
 //without arrow function
+
 let array2 = [12,24,45,22]
 let mapResult = array2.map(function(number){
     return number*4;
@@ -51,6 +86,7 @@ foreach method also iterate through the array but it does nt return a new array.
 
 ```javascript
 //without arrow function
+
 let array1 = [45,23,65,22]
 array1.forEach((number,index){
     console.log(number + " " + "comes at " + index)
@@ -64,11 +100,13 @@ filter method creates a new array and do the function test that has given
 
 ```javascript
 //with arrow function
+
 let words = ["predestination", "burn", "finally", "demonstalk", "uninterupt"]
 let result = words.filter((word) => word.length>7);
 console.log(result);
 
 //with out arrow function
+
 let words = ["predestination", "burn", "finally", "demonstalk", "uninterupt"]
 let result = words.filter(function(word){
     return word.length>7
@@ -83,6 +121,7 @@ the every() method returns false if the function returns false for one elements
 
 ```javascript
 //without arrow function
+
 function isBelowThreshold(currentValue) {
     return currentValue>40;
 }
@@ -95,18 +134,37 @@ __reduce()__
 
 ```javascript
 //with arrow function
+
 let array = [12,34,45,65,34]
 let reducer = (accumlator,currentValue) => accumlator+currentValue;
 console.log(array.reduce(reducer));
 console.log(array.reduce(reducer,23));
 
 //with out arrwo function
+
 let array = [12,43,5,65,44]
 let result = array.reduce(function(number,sum){
     return sum = number + sum;
 });
 console.log(result);
 ```
+
+
+__closure__
+closer is a combination of funtion and its lextcal environment. a function can access to its lexical environment and its variable. meaing the innerfunction can have access to its outer function varibales
+
+```javascript  
+  function marvel() {
+    let capt = "hey this is your captain"
+    function dc() {
+        console.log(capt);
+    }
+    return dc();
+  }
+  marvel();
+
+```
+
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
