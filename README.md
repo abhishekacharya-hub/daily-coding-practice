@@ -264,7 +264,9 @@ function sumAllNum() {
 }
 console.log(sumAllNum(1,2,3,4,5,6)); //21
 console.log(sumAllNum(21,34,45,6)); //106
+```
 
+```javascript
 //with multiple arg using spread operator
 const sumAllNum = (...args) => {
     let sum = 0;
