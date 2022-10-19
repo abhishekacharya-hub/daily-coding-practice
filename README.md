@@ -386,6 +386,10 @@ const weightOFobject = (mass, gravity = 9.81) => {
 console.log("weight of an object in newton", weightOfObject(100)) //981n
 ```
 
+__higher order function__
+
+a function that takes another funtion as a parameter and return a function as a value, the functio that pass as a parameter is called as callback.
+
 
 __call stack__
 
