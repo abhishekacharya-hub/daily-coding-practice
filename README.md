@@ -346,14 +346,46 @@ function greeting(name = "peter") {
 console.log(greeting());           //peter wwlcome to our universe!
 console.log(greeting("abhishek"));  //abhishek welcome to our universe!
 
+//with aroow function
+const greeting = (name = "peter") => {
+    let message = `${name}, welcome to our universe!`
+    return message;
+} 
 
+console.log(greeting());           //peter wwlcome to our universe!
+console.log(greeting("abhishek"));  //abhishek welcome to our universe!
+```
+
+```javascript
 function calculateAge(birthYear, currentYear = 2022) {
     let age = currentYear - birthYear
     return age;
 }
 console.log('age:', calculateAge(1997)); //22
 
+//with arrow function 
+const calculateAge = (birthYear, currentYear = 2022) => {
+    let age = currentYear - birthYear
+    return age;
+}
+console.log('age:', calculateAge(1997)); //22
 ```
+
+```javascript
+function weightOfObject(mass, gravity = 9.81) {
+    let weight = mass * gravity + 'n'
+    return weight;
+}
+console.log("weight of an object in newton", weightOfObject(100)) //981n
+
+//with arrow function
+const weightOFobject = (mass, gravity = 9.81) => {
+    let weight = mass * gravity + 'n'
+    return weight;
+}
+console.log("weight of an object in newton", weightOfObject(100)) //981n
+```
+
 
 __call stack__
 
