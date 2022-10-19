@@ -250,7 +250,7 @@ function sumOfArrValue(arr) {
     }
     return sum;
 }
-const numbers = [12,23,34,4,45]
+const numbers = [12,23,34,4,45] //128
 console.log(sumOfArrValue(numbers));
 
 
@@ -262,8 +262,19 @@ function sumAllNum() {
     }
     return sum;
 }
-console.log(sumAllNum(1,2,3,4,5,6));
-console.log(sumAllNum(21,34,45,6));
+console.log(sumAllNum(1,2,3,4,5,6)); //21
+console.log(sumAllNum(21,34,45,6)); //106
+
+//with multiple arg using spread operator
+const sumAllNum = (...args) => {
+    let sum = 0;
+    for(const element of args) {
+        sum += element
+    }
+    return sum;
+}
+console.log(sumAllNum(12,23,45,64)); //144
+console.log(sumAllNum(32,12,5,23)); //72
 ```
 
 __anonymous function__
@@ -320,6 +331,28 @@ console.log(square(2)); //4
 //if we have one line then we can explicits return
 const square = (n) => n*n  
 ```
+
+__function with diffrent parameter__
+
+sometimes we pass default value to parameters. when we invokes the function if we do not pass an argument the default value will be used. Both function declaration and arrow function can have a default value or values.
+
+```javascript
+function greeting(name = "peter") {
+    let message = `${name}, welcome to our universe!`
+    return message;
+}
+console.log(greeting());           //peter wwlcome to our universe!
+console.log(greeting("abhishek"));  //abhishek welcome to our universe!
+
+
+function calculateAge(birthYear, currentYear = 2022) {
+    let age = currentYear - birthYear
+    return age;
+}
+console.log('age:', calculateAge(1997)); //22
+
+```
+
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
