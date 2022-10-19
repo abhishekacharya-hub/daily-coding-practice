@@ -212,6 +212,60 @@ closer is a combination of funtion and its lextcal environment. a function can a
 
 __function__ :
 
+__function with a parameter__
+
+in a function we can pass different datatypes like numbers, string, boolean, object,functions as a parameter
+
+```javascript
+function areaofCircle(r) {
+    let area = 2*3.14*r
+    return area;
+}
+console.log(areaofCircle(10));
+```
+
+__function with two parameter__
+
+```javascript
+function sum(num1,num2) {
+    let result = num1+num2
+    return result;
+}
+console.log(sum(12,34));
+
+
+function printFullName(firstName,lastName) {
+    return `${firstName} ${lastName}`
+}
+console.log(printFullName("abhishek", "acharya"));
+```
+
+__function with multiple parameter__
+
+```javascript
+function sumOfArrValue(arr) {
+    let sum = 0;
+    for(i = 0; i< arr.length; i++) {
+        sum = sum + arr[i];
+    }
+    return sum;
+}
+const numbers = [12,23,34,4,45]
+console.log(sumOfArrValue(numbers));
+
+
+//with function declaration
+function sumAllNum() {
+    let sum = 0;
+    for(let i = 0; i < arguments.length; i++) {
+        sum+= arguments[i];
+    }
+    return sum;
+}
+console.log(sumAllNum(1,2,3,4,5,6));
+console.log(sumAllNum(21,34,45,6));
+```
+
 __anonymous function__
 
 a function with out name is called anonymous function
