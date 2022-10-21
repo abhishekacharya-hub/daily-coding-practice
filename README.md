@@ -388,9 +388,36 @@ console.log("weight of an object in newton", weightOfObject(100)) //981n
 
 __currying function__
 
+it is a process that a function takes multiple arguments and turning in to a sequence of function each with one argument.
+
+inshort instead of passing all argument with the same time, takes fist one and return a function, that takes the second one and return a another function and that takes third arg and return another function so on so forth untill all arg have been fulfilled.
+
+```javascript
+//normak function
+function addNum(a,b,c) {
+    return a+b+c;
+}
+console.log(addNum(12,23,34))
+
+//with currying function
+const addCurry = (a) => {
+    return (b) => {
+        return (c) => {
+            return a+ b+ c;
+        }
+    }
+}
+console.log(addCurry(10)(20)(30));
+```
+
 __unary function__
 
+
+
 __higher order function__
+
+
+__promise__
 
 a function that takes another funtion as a parameter and return a function as a value, the functio that pass as a parameter is called as callback.
 
@@ -408,7 +435,7 @@ __stack overflow__
 
 when the stack takes more space then it was assign it gets an error called stackoverfilow.
 
-this is comes to the picture when we deal with recursive functions, it is a fucntion that call itself multiple times with out any exit point . so when we call a recursive function the browser throws an error "maximum call size exceeds" this is what we call stack overflow
+this is comes to the picture when we deal with recursive functions, it is a fucntion that call itself multiple times with out any exit point . so when we call a recursive function the browser throws an error "maximum call size exceeds" this is what we call stack overflow.
 
 __constructor function__
 
