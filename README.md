@@ -397,7 +397,7 @@ inshort instead of passing all argument with the same time, takes fist one and r
 function addNum(a,b,c) {
     return a+b+c;
 }
-console.log(addNum(12,23,34))
+console.log(addNum(12,23,34)) //69
 
 //with currying function
 const addCurry = (a) => {
@@ -407,19 +407,41 @@ const addCurry = (a) => {
         }
     }
 }
-console.log(addCurry(10)(20)(30));
+console.log(addCurry(10)(20)(30)); //60
 ```
 
 __unary function__
 
+unary function is a function that takes only single argument.
 
+```javascript
+function add(number) {
+    return 10 + number;
+}
+console.log(add(20));
+```
 
 __higher order function__
 
+higher order function is a function that takes another function as an argument and retrn a function as a value. 
+that function that has pass into this is called as callback.
+
+```javascript
+const higherOrder = (a) => {
+    const doSomething = (b) => {
+        const doWhatEver = (c) => {
+            return 2*a + 3*b + c;
+        }
+        return doWhatEver;
+    }
+    return doSomething;
+}
+console.log(higherOrder(3)(2)(10)); //22
+```
 
 __promise__
 
-a function that takes another funtion as a parameter and return a function as a value, the functio that pass as a parameter is called as callback.
+a function that takes another funtion as a parameter and return a function as a value, the function that pass as a parameter is called as callback.
 
 
 __call stack__
