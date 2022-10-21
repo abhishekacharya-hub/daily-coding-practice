@@ -444,6 +444,8 @@ __promise__
 a function that takes another funtion as a parameter and return a function as a value, the function that pass as a parameter is called as callback.
 
 
+__async and await__
+
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
