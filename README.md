@@ -439,7 +439,7 @@ const higherOrder = (a) => {
 console.log(higherOrder(3)(2)(10)); //22
 ```
 
-__setting time__
+__setting time__ :
 
 in javascript we can execute something with in a time interval or after a delay ot time.
 settimeout , setinterval
@@ -465,9 +465,12 @@ function greeting() {
 setInteval(greeting, 2000);
 ```
 
-__Destructuring__
+__Destructuring__ :
 
 destructuring is unpacking array and object to distinct variables, it is allow to write cleaner and readable code.
+
+1.array
+2.object
 
 ```javascript
 const numbers = [1,2,3,4]
@@ -488,10 +491,26 @@ const fullStack = [
 const [frontend,backend] = fullStack;
 console.log(frontend,backend);
 ```
+Getting the rest of the array using the spread operator We use three dots(...) to spread or get the rest of an array during destructuring.
 
+```javascript
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+const [num1,num2,num3, ...rest ] = numbers;
+console.log(num1,num2,num3,...rest);
 
+```
+__destructuring object__
 
-
+```javascript
+const { title, price, description } = {
+  title: "iPhone",
+  price: 999,
+  description: "The iPhone is a smartphone developed by Apple"
+};
+console.log(title); // iPhone
+console.log(price); // 999
+console.log(description); // The iPhone is a smartphone developed by Apple
+```
 
 
 
