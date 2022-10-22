@@ -465,6 +465,29 @@ function greeting() {
 setInteval(greeting, 2000);
 ```
 
+__Destructuring__
+
+destructuring is unpacking array and object to distinct variables, it is allow to write cleaner and readable code.
+
+```javascript
+const numbers = [1,2,3,4]
+const [numb1,num2,num3,num4] = numbers;
+console.log(num3,num1); //3,1
+
+const countries = ["norway","finland","italy","india"]
+const [nor,fin,ita,ind,den = "denmark"]; = countries;
+console.log(nor,fin,ind,den);
+```
+__destructuring nexted array__
+
+```javascript
+const fullStack = [
+    ["html","css","javascript","react"],
+     ["nodejs","express","mongodb"]
+]
+const [frontend,backend] = fullStack;
+console.log(frontend,backend);
+```
 
 
 
