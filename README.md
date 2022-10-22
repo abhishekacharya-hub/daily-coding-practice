@@ -439,6 +439,40 @@ const higherOrder = (a) => {
 console.log(higherOrder(3)(2)(10)); //22
 ```
 
+__setting time__
+
+in javascript we can execute something with in a time interval or after a delay ot time.
+settimeout , setinterval
+
+__setTimeout__
+
+in js settimeout is higherorder function that takes a delay of time to execute the code, it takes a callback function and a duration as a parameter, the duration will be in millisecond and the callback wait for the amount of time
+
+```javascript
+function greeting() {
+    console,log("hey universe");
+}
+setTimeout(greeting, 2000);
+```
+__setInterval__
+
+in js setinterval is a highorder function that execute the function or code with an interval of time. the function takes a callback and a duration for the time interval.
+
+```javascript
+function greeting() {
+    console.log("hey universe");
+}
+setInteval(greeting, 2000);
+```
+
+
+
+
+
+
+
+
+
 __promise__
 
 a function that takes another funtion as a parameter and return a function as a value, the function that pass as a parameter is called as callback.
