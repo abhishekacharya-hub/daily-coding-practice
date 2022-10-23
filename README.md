@@ -499,6 +499,47 @@ const [num1,num2,num3, ...rest ] = numbers;
 console.log(num1,num2,num3,...rest);
 
 ```
+
+__destructuring when loop through array__
+
+```javascript
+const countries = [
+  ["finland" , "hesinki"],
+  ["swedan" , "stockhom"],
+  ["norway" , "olso"]
+]
+for(const [country,city] of countries) {
+  console.log(country,city);
+}
+
+const fullStack = [
+  ['html','css','javascript','react'],
+  ['nodejs','express','mongodb']
+]
+for(const [first,second,third,fourth] of fullStack) {
+  console.log(first,second,third,fourth);
+}
+```
+```javascript
+const languages = [
+    { lang: 'English', count: 91 },
+  { lang: 'French', count: 45 },
+  { lang: 'Arabic', count: 25 },
+  { lang: 'Spanish', count: 24 },
+  { lang: 'Russian', count: 9 },
+  { lang: 'Portuguese', count: 9 },
+  { lang: 'Dutch', count: 8 },
+  { lang: 'German', count: 7 },
+  { lang: 'Chinese', count: 5 },
+  { lang: 'Swahili', count: 4 },
+  { lang: 'Serbian', count: 4 },
+]
+
+for(const {lang,count} of languages) {
+    console.log(`the ${lang} is spoken in ${count} countries`)
+}
+```
+
 __destructuring object__
 
 ```javascript
