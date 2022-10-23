@@ -592,6 +592,37 @@ when the stack takes more space then it was assign it gets an error called stack
 
 this is comes to the picture when we deal with recursive functions, it is a fucntion that call itself multiple times with out any exit point . so when we call a recursive function the browser throws an error "maximum call size exceeds" this is what we call stack overflow.
 
+__json__
+
+```javascript
+//json:
+
+//empty json array
+const empty = [];
+//json array of numbers
+const numbs = [12,23,43,54];
+//josn array of objects
+let emp = [{ "name": "Kabir Dixit", "email": "kabir.dixit@gmail.com", "age": 23 },
+{ "name": "Mukta Bhagat", "email": "mukta.bhagat@gmail.com", "age": 28 },
+{ "name": "Sakshi Ramakrishnan", "email": "sakshi.ramakrishnan@gmail.com", "age": 33 }
+];
+
+console.log(emp[1].name); //mukta bhagat
+```
+
+```javascript
+//how to validate json object in javascript
+function isValidJson(json) {
+  try{
+    JSON.parse(json)
+    return true;
+  }catch (e) {
+    return false;
+  }
+}
+console.log(isValidJson("{}")); //TRUE
+console.log(isValidJson("abc")); //FALSE
+```
 __constructor function__
 
 These functions are the most conventional way to create objects that use functionality from each other using prototypal inheritance.
