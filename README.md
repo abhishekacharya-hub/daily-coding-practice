@@ -13,7 +13,21 @@ function sum(x,y,z) {
 }
 const numbers = [12,23,34]
 console.log(sum(...numbers));
+
+
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+const [one,two,three, ...rest] = numbers
+console.log(one,two,three);  //[1,2,3]
+console.log(...rest);        //[4,5,6,7,8,9,10]
+
+
+const frontend = ['html','css','javascript','react']
+const backend = ['nodejs','express','mongodb']
+const fullStack = [...frontend, ...backend]
+console.log(fullStack);
+
 ```
+
 ```javascript
 //rest opertor
 
