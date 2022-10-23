@@ -623,6 +623,16 @@ function isValidJson(json) {
 console.log(isValidJson("{}")); //TRUE
 console.log(isValidJson("abc")); //FALSE
 ```
+
+```javascript
+//JSON stringify
+const user = {'name': 'Shashi Meda', 'email': 'shashi.meda@email.com', 'age': 28};
+console.log(JSON.stringify(user));
+
+//JSON parse
+const user1 = '{"name": "Shashi Meda", "email": "shashi.meda@email.com", "age": 28}'
+console.log(JSON.parse(user1));
+```
 __constructor function__
 
 These functions are the most conventional way to create objects that use functionality from each other using prototypal inheritance.
