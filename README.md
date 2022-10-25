@@ -416,6 +416,15 @@ let result = array.reduce(function(number,sum){
 console.log(result);
 ```
 
+__find()__
+
+If we are interested in the first occurrence of a certain item or element in an array we can use find method. Unlike map and filter, find just return the first occurrence of an item instead of an array.
+
+```javascript
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+const firstEvenNumbers = numbers.find((n) => n%2 ===0) //2
+const firstOddNumbers = numbers.find((n) => n%2 !==0)  //1
+```
 
 
 
