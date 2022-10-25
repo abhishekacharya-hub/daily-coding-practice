@@ -73,18 +73,66 @@ const person = {
 }
 
 //access values using . 
-console.log(person.age);
-console.log(person.firstName);
-console.log(person.lastName);
-console.log(person.getFullName());
+console.log(person.age);        //25
+console.log(person.firstName);  //abhishek
+console.log(person.lastName);   //acharya
+console.log(person.getFullName());  //abhishek acharya
 
 //access values using square bracket and key name
-console.log(person['age']);
+console.log(person['age']);       
 console.log(person['firstName']);
 console.log(person['lastName']);
 
 ```
 
+__setting a new key for an object__
+
+object is a mutable datastructure and we can manipulate after we create it
+
+```javascript
+const person = {
+    firstName : 'abhishek',
+    lastName : 'acharya',
+    age : 26,
+    country : 'india',
+    city : 'berhampur',
+    skills : [
+        'HTML',
+        'css',
+        'javascript',
+        'react',
+        'nodejs',
+        'express',
+        'mongodb',
+        'python',
+        'd3.js'
+    ],
+    getFullName : function() {
+        return `${this.firstName} ${this.lastName}`
+    },
+}
+
+person.nationality = "Ethiopian";
+person.country = "Finland";
+person.title = "teacher";
+person.skills.push("Meteor");
+person.skills.push("SasS");
+person.isMarried = true;
+
+person.getPersonalInfo = function() {
+    let skillsWithoutLastSkill = this.skills
+        .slice(0, this.skills.length -1)
+        .join(",")
+    let lastSkill = this.skills.slice(this.skills.length-1)[0]
+
+    let skills = `${skillsWithoutLastSkill}, and ${lastSkill}`
+    let fullName =this.getFullName();
+    let stateMent = `${fullName} is a ${this.title}.\nHe lives in ${this.country}.\nHe teaches ${skills}.`
+    return stateMent;
+}
+console.log(person);
+console.log(person.getPersonalInfo());
+```
 
 __spread operator and rest operator__
 
