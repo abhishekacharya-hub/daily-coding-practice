@@ -170,6 +170,7 @@ console.log(copyPerson);
 ```
 
 Getting object keys using Object.keys()
+
 _Object.keys_: To get the keys or properties of an object as an array
 
 ```javascript
@@ -182,6 +183,7 @@ console.log(address);
 ```
 
 Getting object keys and values using Object.entries()
+
 *Object.entries*:To get the keys and values in an array
 
 ```javascript
@@ -192,6 +194,7 @@ console.log(entry)
 ```
 
 Checking properties using hasOwnProperty()
+
 *hasOwnProperty*: To check if a specific key or property exist in an object
 
 ```javascript
