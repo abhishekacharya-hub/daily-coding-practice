@@ -1,6 +1,91 @@
 # daily-coding-practice
 in this repo contain all the daily javascript code practices of diffrent topics with  well structured and maintained code.
 
+
+__object__ :
+
+in javascript everything can be an object and object have a properties and properties have values. to create object literal we us two curly braces,
+
+```javascript
+//creating an empty object
+const person = {}
+```
+
+__creating object with two values__
+
+```javascript
+const rectangle = {
+    length : 20
+    width : 10
+}
+console.log(rectangle);
+
+const person = {
+    firstName: 'Asabeneh',
+    lastName: 'Yetayeh',
+    age: 25,
+    country: 'Finland',
+    city: 'Helsinki',
+    skills: [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'React',
+    'Node',
+    'MongoDB',
+    'Python',
+    'D3.js',
+  ],
+  isMarried: true,
+}
+console.log(person)
+```
+
+__getting value from an object__
+
+we can access values from object using two methods 
+1. using dot method
+2. using square bracket
+
+```javascript
+const person = {
+    firstName : 'abhsiehek',
+    lastName : 'acharya',
+    age : 25,
+    country : 'india',
+    city : 'berhampur',
+    skills : [
+        'HTML',
+        'css',
+        'javascript',
+        'react',
+        'nodejs',
+        'express',
+        'mongodb',
+        'python',
+        'd3.js'
+    ],
+    isMarried : false,
+    getFullName : function() {
+        return `${this.firstName} ${this.lastName}`
+    },
+    'phone number' : +1234355444,
+}
+
+//access values using . 
+console.log(person.age);
+console.log(person.firstName);
+console.log(person.lastName);
+console.log(person.getFullName());
+
+//access values using square bracket and key name
+console.log(person['age']);
+console.log(person['firstName']);
+console.log(person['lastName']);
+
+```
+
+
 __spread operator and rest operator__
 
 spread operator expand the elements of an iterable while rest operator is the rest last element of the arg.
@@ -41,6 +126,9 @@ function xyz(x, y, ...z) {
 
 xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
 ```
+
+
+
 __array methods__:
 
 __slice()__
@@ -208,6 +296,8 @@ console.log(result);
 ```
 
 
+
+
 __closure__
 
 closer is a combination of funtion and its lextcal environment. a function can access to its lexical environment and its variable. meaing the innerfunction can have access to its outer function varibales
@@ -223,6 +313,10 @@ closer is a combination of funtion and its lextcal environment. a function can a
   marvel();
 
 ```
+
+
+
+
 
 __function__ :
 
@@ -453,6 +547,9 @@ const higherOrder = (a) => {
 console.log(higherOrder(3)(2)(10)); //22
 ```
 
+
+
+
 __setting time__ :
 
 in javascript we can execute something with in a time interval or after a delay ot time.
@@ -478,6 +575,9 @@ function greeting() {
 }
 setInteval(greeting, 2000);
 ```
+
+
+
 
 __Destructuring__ :
 
