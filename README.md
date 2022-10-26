@@ -249,6 +249,7 @@ xyz("hey", "hello", "wassup", "goodmorning", "hi", "howdy")
 ```
 
 
+__functional programming__
 
 __array methods__:
 
@@ -393,6 +394,18 @@ function isBelowThreshold(currentValue) {
 let array = [23,34,12,26]
 console.log(array.every(isBelowThreshold))
 
+```
+
+__some()__
+
+it returns a boolean and if one or some of item fulfills the criteria.
+
+```javascript
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+const someAreEven = numbers.some((n) => n%2 === 0)
+const someAreOdd = numbers.some((n) => n%2 !==0)
+console.log(someAreEven);
+console.log(someAreOdd);
 ```
 
 __reduce()__
@@ -797,7 +810,11 @@ console.log(price); // 999
 console.log(description); // The iPhone is a smartphone developed by Apple
 ```
 
+__class__:
 
+in javascript everything you see are objects and we create class to create an object, classes in javascript are like blue prints which allow us to write obejcts. a class is like a object constructure or blue print to create object. 
+
+once we create class we can create object from it when ever we want. and creating object from class is called as instantiation.
 
 
 __promise__
