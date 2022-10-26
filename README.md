@@ -816,6 +816,80 @@ in javascript everything you see are objects and we create class to create an ob
 
 once we create class we can create object from it when ever we want. and creating object from class is called as instantiation.
 
+```javascript
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+const person1 = new Person("abhishek", "acharya");
+console.log(person1);
+```
+
+```javascript
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+const Person1 = new Person("atul", "dash");
+const Person2 = new Person("abel", "weeknd");
+const Person3 = new Person("jhonny", "roy");
+
+console.log(Person1);
+console.log(Person2);
+console.log(Person3);
+```
+
+Using the class Person we created three persons object. As you can see our class did not many properties let us add more properties to the class.
+
+```javascript
+class Person{
+    constructor(firstName,lastName,age,country,city){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.country = country;
+        this.city = city;
+    }
+}
+const Person1 = new Person("abhishek","acharya","25","india","berhampur")
+console.log(Person1);
+```
+
+__default value with constructor__
+
+The constructor function properties may have a default value like other regular functions.
+
+```javascript
+class Person{
+    constructor(
+        firstName = 'Asabeneh',
+        lastName = 'Yetayeh',
+        age = 250,
+        country = 'Finland',
+        city = 'Helsinki'
+    ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.country = country;
+        this.city = city;
+    }
+}
+const Person1 = new Person();
+const Person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+console.log(Person1);
+console.log(Person2);
+```
+
+
+
+
+
 
 __promise__
 
