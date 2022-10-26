@@ -886,6 +886,41 @@ console.log(Person1);
 console.log(Person2);
 ```
 
+__class methods__
+
+The constructor inside a class is a builtin function which allow us to create a blueprint for the object. In a class we can create class methods. Methods are JavaScript functions inside the class. Let us create some class methods.
+
+```javascript
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.country = country;
+    this.city = city;
+  }
+  getFullName() {
+    const fullName = this.firstName + " " + this.lastName;
+    return fullName;
+  }
+}
+
+const Person1 = new Person("abhi", "acharya", 25, "india", "berhampur");
+const Person2 = new Person("Lidiya", "Tekle", 28, "Finland", "Espoo");
+
+console.log(Person1.getFullName());
+console.log(Person2.getFullName());
+```
+
+
+
+
+
+
+
+
+
+
 
 
 
