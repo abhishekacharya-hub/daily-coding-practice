@@ -997,10 +997,50 @@ console.log(person2.score)
 console.log(person1.skills)
 console.log(person2.skills)
 ```
+```javascript
+1
+1
+["HTML", "CSS", "JavaScript"]
+["Planning", "Managing", "Organizing"]
+```
 
+Do not be puzzled by the difference between regular method and a getter. If you know how to make a regular method you are good. Let us add regular method called getPersonInfo in the Person class.
 
+```javascript
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+    this.score = 0
+    this.skills = []
+  }
+  getFullName() {
+    const fullName = this.firstName + " " +this.lastName
+    return fullName;
+  }
+  get getScore() {
+    this.score
+  }
+  get getSkills() {
+    this.skills
+  }
+  set setScore(score) {
+    this.score += score
+  }
+  set setSkill(skill) {
+    this.skills += skill
+  }
+  getFullInfo() {
+    let fullName = this.getFullName;
+    let skills = this.skills.length>0 && this.skills.slice(0,this.skills.length-1).join(',') +
+                                                  `and $[this.skills[this.skills.length-1]]`
+  }
+}
 
-
+```
 
 
 
