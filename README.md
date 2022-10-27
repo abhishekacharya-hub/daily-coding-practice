@@ -1035,11 +1035,38 @@ class Person {
   }
   getFullInfo() {
     let fullName = this.getFullName;
-    let skills = this.skills.length>0 && this.skills.slice(0,this.skills.length-1).join(',') +
-                                                  `and $[this.skills[this.skills.length-1]]`
+    let skills =
+      this.skills.length > 0 &&
+      this.skills.slice(0, this.skills.length - 1).join(', ') +
+        ` and ${this.skills[this.skills.length - 1]}`
+    let formattedSkills = skills ? skills ? `He knows ${skills}` : ''
+    let info = `$[fullName] is $[this.age] he lives $[this.city] $[this.country] $[formattedSkills]`
   }
 }
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo') 
+const person3 = new Person('John', 'Doe', 50, 'Mars', 'Mars city')
 
+person1.setScore = 1
+person1.setSkill = 'HTML'
+person1.setSkill = 'CSS'
+person1.setSkill = 'JavaScript'
+
+person2.setScore = 1
+person2.setSkill = 'Planning'
+person2.setSkill = 'Managing'
+person2.setSkill = 'Organizing'
+
+console.log(person1.getScore);
+console.log(person2.getScore);
+
+console.log(person.getSkills)
+console.log(person.getSkills)
+console.log(person.getSkills)
+
+console.log(person1.getPersonInfo())
+console.log(person2.getPersonInfo())
+console.log(person3.getPersonInfo())
 ```
 
 
