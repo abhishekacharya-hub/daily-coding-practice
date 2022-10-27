@@ -908,10 +908,95 @@ class Person {
 const Person1 = new Person("abhi", "acharya", 25, "india", "berhampur");
 const Person2 = new Person("Lidiya", "Tekle", 28, "Finland", "Espoo");
 
-console.log(Person1.getFullName());
-console.log(Person2.getFullName());
+console.log(Person1.getFullName()); //Asabeneh Yetayeh
+console.log(Person2.getFullName()); //Lidiya Tekle
 ```
 
+__geter__
+
+we use geter to access the value from the object. We write a get method using keyword get followed by a function. Instead of accessing properties directly from the object we use getter to get the value. See the example bellow
+
+```javascript
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.country = country;
+    this.city = city;
+    this.score = 0;
+    this.skills = [];
+  }
+  getFullName() {
+    const fullName = this.firstName + " " + this.lastName;
+    return fullName;
+  }
+  get getScore() {
+    return this.score;
+  }
+  get getSkills() {
+    return this.skills;
+  }
+}
+const Person1 = new Person("Asabeneh", "Yetayeh", 250, "Finland", "Helsinki");
+const Person2 = new Person("Lidiya", "Tekle", 28, "Finland", "Espoo");
+
+console.log(Person1.getScore);
+console.log(Person2.getScore);
+```
+
+__seter__
+
+The setter method allow us to modify the value of certain properties. We write a setter method using keyword set followed by a function. See the example bellow.
+
+```javascript
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName
+    this.lastName = lastName
+    this.age = age
+    this.country = country
+    this.city = city
+    this.score = 0
+    this.skills = []
+  }
+  getFullName() {
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
+  }
+  get getScore() {
+    return this.score
+  }
+  get getSkills() {
+    return this.skills
+  }
+  set setScore(score) {
+    this.score += score
+  }
+  set setSkill(skill) {
+    this.skills.push(skill)
+  }
+}
+
+const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
+
+person1.setScore = 1
+person1.setSkill = 'HTML'
+person1.setSkill = 'CSS'
+person1.setSkill = 'JavaScript'
+
+person2.setScore = 1
+person2.setSkill = 'Planning'
+person2.setSkill = 'Managing'
+person2.setSkill = 'Organizing'
+
+console.log(person1.score)
+console.log(person2.score)
+
+console.log(person1.skills)
+console.log(person2.skills)
+```
 
 
 
