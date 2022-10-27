@@ -1018,33 +1018,36 @@ class Person {
     this.skills = []
   }
   getFullName() {
-    const fullName = this.firstName + " " +this.lastName
-    return fullName;
+    const fullName = this.firstName + ' ' + this.lastName
+    return fullName
   }
   get getScore() {
-    this.score
+    return this.score
   }
   get getSkills() {
-    this.skills
+    return this.skills
   }
   set setScore(score) {
     this.score += score
   }
   set setSkill(skill) {
-    this.skills += skill
+    this.skills.push(skill)
   }
-  getFullInfo() {
-    let fullName = this.getFullName;
+  getPersonInfo() {
+    let fullName = this.getFullName()
     let skills =
       this.skills.length > 0 &&
       this.skills.slice(0, this.skills.length - 1).join(', ') +
         ` and ${this.skills[this.skills.length - 1]}`
-    let formattedSkills = skills ? skills ? `He knows ${skills}` : ''
-    let info = `$[fullName] is $[this.age] he lives $[this.city] $[this.country] $[formattedSkills]`
+    let formattedSkills = skills ? `He knows ${skills}` : ''
+
+    let info = `${fullName} is ${this.age}. He lives ${this.city}, ${this.country}. ${formattedSkills}`
+    return info
   }
 }
+
 const person1 = new Person('Asabeneh', 'Yetayeh', 250, 'Finland', 'Helsinki')
-const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo') 
+const person2 = new Person('Lidiya', 'Tekle', 28, 'Finland', 'Espoo')
 const person3 = new Person('John', 'Doe', 50, 'Mars', 'Mars city')
 
 person1.setScore = 1
@@ -1057,16 +1060,26 @@ person2.setSkill = 'Planning'
 person2.setSkill = 'Managing'
 person2.setSkill = 'Organizing'
 
-console.log(person1.getScore);
-console.log(person2.getScore);
+console.log(person1.getScore)
+console.log(person2.getScore)
 
-console.log(person.getSkills)
-console.log(person.getSkills)
-console.log(person.getSkills)
+console.log(person1.getSkills)
+console.log(person2.getSkills)
+console.log(person3.getSkills)
 
 console.log(person1.getPersonInfo())
 console.log(person2.getPersonInfo())
 console.log(person3.getPersonInfo())
+```
+```javascript
+1
+1
+["HTML", "CSS", "JavaScript"]
+["Planning", "Managing", "Organizing"]
+[]
+Asabeneh Yetayeh is 250. He lives Helsinki, Finland. He knows HTML, CSS and JavaScript
+Lidiya Tekle is 28. He lives Espoo, Finland. He knows Planning, Managing and Organizing
+John Doe is 50. He lives Mars city, Mars.
 ```
 
 
