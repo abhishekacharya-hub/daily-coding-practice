@@ -1083,6 +1083,12 @@ John Doe is 50. He lives Mars city, Mars.
 ```
 
 
+__static method__
+
+
+The static keyword defines a static method for a class. Static methods are not called on instances of the class. Instead, they are called on the class itself. These are often utility functions, such as functions to create or clone objects. An example of static method is Date.now(). The now method is called directly from the class.
+
+
 
 
 
