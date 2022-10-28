@@ -1157,10 +1157,142 @@ console.log(Person.favoriteSkill())
 console.log(Person.showDateTime())
 ```
 
+__inheritence__
+with using inheritence we can access the parent class and its methods and properties, this reduce the code repetaion.
 
+```javascript
+class student extends Person {
+  saySomething() {
+    console.log('hey i am the child of the person class')
+  }
+}
+const s1 = new student("michio","kaku",'japan',78,'hesinki')
+console.log(s1)
+conosle.log(s1.saySomething())
+console.log(s1.getFullName())
+console.log(s1.getPersonInfo())
+```
+```javascript
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: "Finland", country: 250, city: "Helsinki", …}
+I am a child of the person class
+Asabeneh Yetayeh
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: "Finland", country: 250, city: "Helsinki", …}
+Asabeneh Yetayeh is Finland. He lives Helsinki, 250.
+```
 
+exercise
 
+```javascript
+class dog {
+  constructor(breedName,petName,color,age) {
+    this.breedName = breedName
+    this.petName = petName
+    this.color = color
+    this.age = age
+  }
+}
+const cat = new dog("husky","ricky","white",5)
+console.log(cat)
+```
 
+__overriding method__
+
+As you can see, we manage to access all the methods in the Person Class and we used it in the Student child class. We can customize the parent methods, we can add additional properties to a child class. If we want to customize, the methods and if we want to add extra properties, we need to use the constructor function the child class too. In side the constructor function we call the super() function to access all the properties from the parent class. The Person class didn't have gender but now let us give gender property for the child class, Student. If the same method name used in the child class, the parent method will be overridden.
+
+```javascript
+class Person {
+  constructor(firstName, lastName, age, country, city) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+    this.country = country;
+    this.city = city;
+    this.score = 0;
+    this.skills = [];
+  }
+  getFullName() {
+    const fullName = this.firstName + " " + this.lastName;
+    return fullName;
+  }
+  get getScore() {
+    return this.score;
+  }
+  get getSkills() {
+    return this.skills;
+  }
+  set setScore(score) {
+    this.score += score;
+  }
+  set setSkill(skill) {
+    this.skills.push(skill);
+  }
+}
+class Student extends Person {
+  constructor(firstName, lastName, age, country, city, gender) {
+    super(firstName, lastName, age, country, city);
+    this.gender = gender;
+  }
+
+  saySomething() {
+    console.log("I am a child of the person class");
+  }
+
+  getPersonInfo() {
+    let fullName = this.getFullName();
+    let skills =
+      this.skills.length > 0 &&
+      this.skills.slice(0, this.skills.length - 1).join(", ") +
+        ` and ${this.skills[this.skills.length - 1]}`;
+
+    let formattedSkills = skills ? `He knows ${skills}` : "";
+    let pronoun = this.gender == "Male" ? "He" : "She";
+
+    let info = `${fullName} is ${this.age}. ${pronoun} lives in ${this.city}, ${this.country}. ${formattedSkills}`;
+    return info;
+  }
+}
+
+const s1 = new Student(
+  "Asabeneh",
+  "Yetayeh",
+  250,
+  "Finland",
+  "Helsinki",
+  "Male"
+);
+const s2 = new Student("Lidiya", "Tekle", 28, "Finland", "Helsinki", "Female");
+s1.setScore = 1;
+s1.setSkill = "HTML";
+s1.setSkill = "CSS";
+s1.setSkill = "JavaScript";
+
+s2.setScore = 1;
+s2.setSkill = "Planning";
+s2.setSkill = "Managing";
+s2.setSkill = "Organizing";
+
+console.log(s1);
+
+console.log(s1.saySomething());
+console.log(s1.getFullName());
+console.log(s1.getPersonInfo());
+
+console.log(s2.saySomething());
+console.log(s2.getFullName());
+console.log(s2.getPersonInfo());
+```
+```javascript
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki", …}
+Student {firstName: "Lidiya", lastName: "Tekle", age: 28, country: "Finland", city: "Helsinki", …}
+I am a child of the person class
+Asabeneh Yetayeh
+Student {firstName: "Asabeneh", lastName: "Yetayeh", age: 250, country: "Finland", city: "Helsinki", …}
+Asabeneh Yetayeh is 250. He lives in Helsinki, Finland. He knows HTML, CSS and JavaScript
+I am a child of the person class
+Lidiya Tekle
+Student {firstName: "Lidiya", lastName: "Tekle", age: 28, country: "Finland", city: "Helsinki", …}
+Lidiya Tekle is 28. She lives in Helsinki, Finland. He knows Planning, Managing and Organizing
+```
 
 
 
