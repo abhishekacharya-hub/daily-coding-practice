@@ -1158,6 +1158,7 @@ console.log(Person.showDateTime())
 ```
 
 __inheritence__
+
 with using inheritence we can access the parent class and its methods and properties, this reduce the code repetaion.
 
 ```javascript
