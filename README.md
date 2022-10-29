@@ -1421,3 +1421,61 @@ throttling returns a function and invokes the callback function with a x ms time
 
 the main difference btween the debounce and throttling is both returns the function n number of times but only invokes the callback  and where debounce wait for x ms after the last call where as the throttling invokes the callback function on each x ms interval of time.
 it prevent the frequent calling of the funciton.
+
+
+__conditionals__
+
+there are few conditonals that we mostly use are 
+1. if
+2. if else
+3. if  else if  else
+4. switch
+5. turnary operator
+
+__if__
+
+```javascript
+let num = 4
+if(num>0) {
+  console.log(`${num} is a positive number`)  //3 is a positive number
+}
+
+let isRaining = true;
+if(isRaining) {
+  console.log('remember to take your rain coat')
+}
+```
+
+__if else__
+
+```javascript
+let num = 5
+if(num>0) {
+  console.log(` ${num} is a positive number`)
+}
+else{
+  (`${num} is a negetive number`)
+}
+let isRaining = true
+if(isRaining) {
+  console.log('you need to bring your rain coat')
+}
+else{
+  console.log('you dont need to bring your rain coat')
+}
+```
+
+__if else if else__
+
+```javascript
+let a = 0
+if(a > 0) {
+  console.log(`${a} is a positive number`)
+}else if(a < 0) {
+  console.log(`${a} is a negetive number`)
+}else if(a == 0) {
+  console.log(`${a} is zero`)
+}else{
+  console.log(`${a} is npt a number`)
+}
+```
