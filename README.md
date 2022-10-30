@@ -1479,3 +1479,52 @@ if(a > 0) {
   console.log(`${a} is npt a number`)
 }
 ```
+```javascript
+let weather = 'sunny'
+if(weather === 'rainy') {
+  conole.log('you need a rain coat')
+}else if(weather === 'cloudy') {
+  console.log('you might be cold you need a jacket')
+}else if(weather === sunny) {
+  console.log(' go puit freely')
+}else{
+  console.log('no need of rain coat')
+}
+```
+
+__switch__
+
+switch is alternative of if elseif else. The switch statement starts with a switch keyword followed by a parenthesis and code block.
+
+```javascript
+let weither = 'cloudy'
+switch(weither) {
+  case 'rainy' :
+    console.log('you need a rain coat')
+    break
+  case 'cloudy' :
+    console.log('you need a jacket it might get cold')
+    break
+  case 'sunny' :
+    console.log('go out freely')
+    break
+  default:
+    console.log('no need for a rain coat')
+}
+```
+```javascript
+let num = prompt('Enter number')
+switch (true) {
+  case num > 0:
+    console.log('Number is positive')
+    break
+  case num == 0:
+    console.log('Numbers is zero')
+    break
+  case num < 0:
+    console.log('Number is negative')
+    break
+  default:
+    console.log('Entered value was not a number')
+}
+```
