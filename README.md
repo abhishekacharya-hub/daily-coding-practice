@@ -1528,3 +1528,16 @@ switch (true) {
     console.log('Entered value was not a number')
 }
 ```
+__turnary operators__
+
+Ternary operator is very common in React. It is a short way to write if else statement. In React we use ternary operator in many cases.
+
+To generalize, ternary operator is another way to write conditionals.
+
+
+```javascript
+let isRaining = true
+isRaining
+  ? console.log('You need a rain coat.')
+  : console.log('No need for a rain coat.')
+```
