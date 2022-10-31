@@ -1601,3 +1601,38 @@ for (let i = lastIndex; i >= 0; i--) {
 console.log(newArray);
 
 ```
+2. __while__
+
+we use while loop when we dont know howmany iteration we go in advance
+
+```javascript
+let count = prompt("enter the number");
+while (count > 0) {
+  console.log(count);
+  count--;
+}
+```
+
+3. __do while__
+
+do while runs atleast once even if the conditon false or true
+
+```javascript
+//this conditon is true
+let count = 0;
+do{
+  console.log(count)
+  count ++
+}while(count < 11);
+```
+
+this code will run atleast once even if the conditon is false
+
+```javascript
+//this conditon is false
+let count = 11
+do {
+  console.log(count)
+  count++
+} while (count < 11)
+```
