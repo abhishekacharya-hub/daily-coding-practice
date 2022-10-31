@@ -1541,3 +1541,63 @@ isRaining
   ? console.log('You need a rain coat.')
   : console.log('No need for a rain coat.')
 ```
+
+
+__loops__ :
+
+in programming we use loops for carry repetative tasks, we mostly use,
+1. for
+2. while
+3. do while
+4. for of
+5. for each
+6. for in
+
+A loop usually goes until the condition gets false. But sometimes we like to interrupt the loop or skip an item during iteration. We use break to interrupt the loop and continue to skip an item during iteration.
+
+1. __for__
+
+```javascript
+//sum of all number from 0 to 100
+let sum = 0
+for(let i = 0; i<101; i++) {
+  sum += i;
+}
+console.log(sum);
+
+//sum of only even numbers
+let sum = 0;
+for(let i = 0; i<101; i+2) {
+  sum += i;
+} 
+console.log(sum);
+
+//we can do this with another way
+let total = 0
+for (let i = 0; i < 101; i++) {
+  if (i % 2 == 0) {
+    total += i
+  }
+}
+console.log(total)
+```
+
+code iterate through an array
+```javascript
+const nums = [1, 2, 3, 4, 5]
+for (let i = 0; i < 6; i++) {
+  console.log(nums[i])
+}
+```
+
+reverse an array
+```javascript
+const num = [1, 2, 3, 4, 5];
+const lastIndex = num.length - 1;
+const newArray = [];
+for (let i = lastIndex; i >= 0; i--) {
+  newArray.push(num[i]);
+}
+console.log(newArray);
+
+```
