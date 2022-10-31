@@ -1668,3 +1668,20 @@ countries.forEach((country, i, arr) => {
   console.log(i, country.toUpperCase())
 })
 ```
+
+6. __for in__
+
+The for in loop can be used with object literals to get the keys of the object.
+
+```javascript
+const user = {
+  firstName = 'abhishek'
+  lastName = 'acharya'
+  age = 25
+  country = 'india'
+  skills = ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python', 'javascript']
+}
+for(const key in user){
+  console.log(key,user[key])
+}
+```
