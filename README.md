@@ -1301,6 +1301,19 @@ __promise__
 
 a function that takes another funtion as a parameter and return a function as a value, the function that pass as a parameter is called as callback.
 
+```javascript
+const promise = new Promise(
+  (resolve) => {
+    setTimeout(() => {
+      resolve("I'm a Promise!");
+    }, 5000);
+  },
+  (reject) => {}
+);
+
+promise.then((value) => console.log(value));
+```
+
 
 __async and await__
 
