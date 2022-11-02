@@ -1363,6 +1363,8 @@ __async and await__ :
 
 The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
 
+Async keyword is used along with the function declaration which specifies that this function is now able to accept all types of asynchronous events on itself. Await basically waits for the results which are particularly to be fetched from the source from which that async function is about to fetch the data.
+
 ```javascript
 async function fetchMethod() {
   try {
