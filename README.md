@@ -1341,6 +1341,7 @@ __promise chain__
 
 this process is exeuting group of asynchronous methods one after another using promises is known as Promise chaining. .catch() is used to deal with error
 
+
 ```javascript
 // Promise Chain
 const promise = new Promise((resolve, reject) => {
@@ -1358,7 +1359,23 @@ const promise = new Promise((resolve, reject) => {
 ```
 
 
-__async and await__
+__async and await__ :
+
+The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.
+
+```javascript
+async function fetchMethod() {
+  try {
+    let response = await fetch("https://api.github.com/users/1");
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchMethod();
+
+```
 
 __call stack__
 
