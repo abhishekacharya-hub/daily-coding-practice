@@ -1297,9 +1297,32 @@ Lidiya Tekle is 28. She lives in Helsinki, Finland. He knows Planning, Managing 
 
 
 
-__promise__
+__callback__ :
 
 a function that takes another funtion as a parameter and return a function as a value, the function that pass as a parameter is called as callback.
+
+
+__promise__ :
+
+ES6 has native support for promises. A promise is an object that is waiting for an asynchronous operation to complete, and when that operation completes, the promise is either fulfilled(resolved) or rejected.
+
+promise is handles the asynchronous operations and it is an alternative of callbacks by reducing the callback hell and cleaner code.
+
+```javascript
+//syntax
+const prom = new Promise((reslove,reject) => {
+  //promise description
+})
+
+//exmaple
+const prom = new Promise((resolve,reject) => {
+  // the function is executed automatically when the promise is constructed
+
+  // after 2 second signal that the job is done with the result "done"
+  setTimeout(() => resolve("done"),2000);
+});
+```
+
 
 ```javascript
 const promise = new Promise(
@@ -1313,6 +1336,11 @@ const promise = new Promise(
 
 promise.then((value) => console.log(value));
 ```
+
+__promise chain__ 
+
+this process is exeuting group of asynchronous methods one after another using promises is known as Promise chaining. .catch() is used to deal with error
+
 
 
 __async and await__
