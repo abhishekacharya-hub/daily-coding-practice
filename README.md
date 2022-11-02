@@ -1341,6 +1341,21 @@ __promise chain__
 
 this process is exeuting group of asynchronous methods one after another using promises is known as Promise chaining. .catch() is used to deal with error
 
+```javascript
+// Promise Chain
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve(10), 1000);
+})
+  .then((result) => {
+    console.log(result);
+    return result + 20;
+  })
+  .then((result) => {
+    console.log(result);
+    return result + 30;
+  });
+
+```
 
 
 __async and await__
