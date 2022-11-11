@@ -1379,6 +1379,15 @@ fetchMethod();
 
 ```
 
+ __XMLHttpRequest__ :
+
+XMLHttpRequest() is a built-in browser object that allows to make HTTP requests in JavaScript. XMLHttpRequest has two modes of operation: synchronous and asynchronous.
+
+
+__Fetch()__ :
+
+Fetch allows to make network requests similar to XMLHttpRequest. Fetch makes it easier to make asynchronous requests and handle responses better than with the older XMLHttpRequest. It is an improvement over the XMLHttpRequest API. The main difference between Fetch() and XMLHttpRequest() is that the Fetch API uses Promises, hence avoiding callback hell.
+
 __call stack__
 
 1.firstly the code get executed inside an environment is called as code execution contexts this follows the synchronous code execution pattern
